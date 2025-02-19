@@ -57,7 +57,7 @@ Simply place the `NPFopt.m` file in your MATLAB working directory and call it as
 | `-1`  | Line search failed                                      |
 | `-2`  | LP subproblem failed                                    |
 | `-3`  | QP subproblem failed                                    |
-| `-4`  | NUmerical problem                                       |
+| `-4`  | Numerical problem                                       |
 | `-5`  | Problem size too large (dimension ≥ 500)                |
 
 ------
