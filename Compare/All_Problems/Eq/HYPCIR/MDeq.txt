@@ -1,0 +1,22 @@
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    5 &   4 & f=0.00000000e+00 ||c||_1=5.89859273e-11 Res=0.00000000e+00 MF=0
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    6 &   5 & f=0.00000000e+00 ||c||_1=1.60695901e-11 Res=0.00000000e+00 MF=2 
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    5 &   4 & f=0.00000000e+00 ||c||_1=5.89859273e-11 Res=0.00000000e+00 MF=0
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    6 &   5 & f=0.00000000e+00 ||c||_1=1.60695901e-11 Res=0.00000000e+00 MF=2 
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    6 &   5 & f=0.00000000e+00 ||c||_1=1.60695901e-11 Res=0.00000000e+00 MF=4 
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    6 &   5 & f=0.00000000e+00 ||c||_1=1.60695901e-11 Res=0.00000000e+00 MF=6 
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    5 &   4 & f=0.00000000e+00 ||c||_1=5.89859273e-11 Res=0.00000000e+00 MF=0
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    5 &   4 & f=0.00000000e+00 ||c||_1=5.89859273e-11 Res=0.00000000e+00 MF=0
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    6 &   5 & f=0.00000000e+00 ||c||_1=1.60695901e-11 Res=0.00000000e+00 MF=2 
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    6 &   5 & f=0.00000000e+00 ||c||_1=1.60695901e-11 Res=0.00000000e+00 MF=4 
+HYPCIR     successfully end ||g-A*lambda||<=e, ||c||<=e
+HYPCIR     &    2 &    2 &    6 &    6 &   5 & f=0.00000000e+00 ||c||_1=1.60695901e-11 Res=0.00000000e+00 MF=6 

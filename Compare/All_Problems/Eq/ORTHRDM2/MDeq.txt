@@ -1,0 +1,22 @@
+ORTHRDM2   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHRDM2   &  203 &  100 &   13 &   12 &  11 & f=7.77572467e+00 ||c||_1=7.10161885e-09 Res=9.64813055e-06 MF=0
+ORTHRDM2   successfully end ||d||_2=7.89815209e-06 
+ORTHRDM2   &  203 &  100 &   18 &   17 &  16 & f=7.77572467e+00 ||c||_1=3.90772925e-09 Res=1.52702605e-05 MF=2 
+ORTHRDM2   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHRDM2   &  203 &  100 &   13 &   12 &  11 & f=7.77572467e+00 ||c||_1=7.10161885e-09 Res=9.64813055e-06 MF=0
+ORTHRDM2   successfully end ||d||_2=7.89815209e-06 
+ORTHRDM2   &  203 &  100 &   18 &   17 &  16 & f=7.77572467e+00 ||c||_1=3.90772925e-09 Res=1.52702605e-05 MF=2 
+ORTHRDM2   successfully end ||d||_2=7.89815209e-06 
+ORTHRDM2   &  203 &  100 &   20 &   19 &  18 & f=7.77572467e+00 ||c||_1=3.90772925e-09 Res=1.52702605e-05 MF=4 
+ORTHRDM2   successfully end ||d||_2=7.89815209e-06 
+ORTHRDM2   &  203 &  100 &   22 &   21 &  20 & f=7.77572467e+00 ||c||_1=3.90772925e-09 Res=1.52702605e-05 MF=6 
+ORTHRDM2   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHRDM2   &  203 &  100 &   13 &   12 &  11 & f=7.77572467e+00 ||c||_1=7.10161885e-09 Res=9.64813055e-06 MF=0
+ORTHRDM2   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHRDM2   &  203 &  100 &   13 &   12 &  11 & f=7.77572467e+00 ||c||_1=7.10161885e-09 Res=9.64813055e-06 MF=0
+ORTHRDM2   successfully end ||d||_2=7.89815209e-06 
+ORTHRDM2   &  203 &  100 &   18 &   17 &  16 & f=7.77572467e+00 ||c||_1=3.90772925e-09 Res=1.52702605e-05 MF=2 
+ORTHRDM2   successfully end ||d||_2=7.89815209e-06 
+ORTHRDM2   &  203 &  100 &   20 &   19 &  18 & f=7.77572467e+00 ||c||_1=3.90772925e-09 Res=1.52702605e-05 MF=4 
+ORTHRDM2   successfully end ||d||_2=7.89815209e-06 
+ORTHRDM2   &  203 &  100 &   22 &   21 &  20 & f=7.77572467e+00 ||c||_1=3.90772925e-09 Res=1.52702605e-05 MF=6 

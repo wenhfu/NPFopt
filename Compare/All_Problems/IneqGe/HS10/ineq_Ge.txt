@@ -1,0 +1,24 @@
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   11 &  10 & f=-1.00000037e+00 ||c||_1=7.30872806e-07 Res=3.95103284e-06 MF=0
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=2
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=4
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=6
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   11 &  10 & f=-1.00000037e+00 ||c||_1=7.30872806e-07 Res=3.95103284e-06 MF=0
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=2
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=4
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=6
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   11 &  10 & f=-1.00000037e+00 ||c||_1=7.30872806e-07 Res=3.95103284e-06 MF=0
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=2
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=4
+HS10       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS10       &    2 &    1 &   12 &   12 &  11 & f=-1.00000002e+00 ||c||_1=4.56328237e-08 Res=4.37110474e-08 MF=6

@@ -1,0 +1,22 @@
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   28 &   11 &  10 & f=1.36462820e-12 ||c||_1=1.33226763e-15 Res=2.50191145e-06 MF=0
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   52 &   42 &  41 & f=4.29683279e-12 ||c||_1=6.66133815e-16 Res=5.75248312e-06 MF=2 
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   28 &   11 &  10 & f=1.36462820e-12 ||c||_1=1.33226763e-15 Res=2.50191145e-06 MF=0
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   52 &   42 &  41 & f=4.29683279e-12 ||c||_1=6.66133815e-16 Res=5.75248312e-06 MF=2 
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   34 &   31 &  30 & f=5.29125625e-15 ||c||_1=4.44089210e-16 Res=2.01995400e-07 MF=4 
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   38 &   35 &  34 & f=5.29125625e-15 ||c||_1=4.44089210e-16 Res=2.01995400e-07 MF=6 
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   28 &   11 &  10 & f=1.36462820e-12 ||c||_1=1.33226763e-15 Res=2.50191145e-06 MF=0
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   28 &   11 &  10 & f=1.36462820e-12 ||c||_1=1.33226763e-15 Res=2.50191145e-06 MF=0
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   52 &   42 &  41 & f=4.29683279e-12 ||c||_1=6.66133815e-16 Res=5.75248312e-06 MF=2 
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   34 &   31 &  30 & f=5.29125625e-15 ||c||_1=4.44089210e-16 Res=2.01995400e-07 MF=4 
+HS48       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS48       &    5 &    2 &   38 &   35 &  34 & f=5.29125625e-15 ||c||_1=4.44089210e-16 Res=2.01995400e-07 MF=6 

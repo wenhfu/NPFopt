@@ -1,0 +1,22 @@
+ORTHREGA   successfully end ||d||_2=5.46665105e-06 
+ORTHREGA   &  133 &   64 &  137 &   61 &  60 & f=3.50300206e+02 ||c||_1=1.72957274e-11 Res=1.02679540e-05 MF=0
+ORTHREGA   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGA   &  133 &   64 &   80 &   67 &  66 & f=3.50300206e+02 ||c||_1=4.23480001e-11 Res=4.19864587e-06 MF=2 
+ORTHREGA   successfully end ||d||_2=5.46665105e-06 
+ORTHREGA   &  133 &   64 &  137 &   61 &  60 & f=3.50300206e+02 ||c||_1=1.72957274e-11 Res=1.02679540e-05 MF=0
+ORTHREGA   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGA   &  133 &   64 &   80 &   67 &  66 & f=3.50300206e+02 ||c||_1=4.23480001e-11 Res=4.19864587e-06 MF=2 
+ORTHREGA   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGA   &  133 &   64 &   94 &   81 &  80 & f=3.50300206e+02 ||c||_1=4.23480001e-11 Res=4.19864587e-06 MF=4 
+ORTHREGA   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGA   &  133 &   64 &  108 &   95 &  94 & f=3.50300206e+02 ||c||_1=4.23480001e-11 Res=4.19864587e-06 MF=6 
+ORTHREGA   successfully end ||d||_2=5.46665105e-06 
+ORTHREGA   &  133 &   64 &  137 &   61 &  60 & f=3.50300206e+02 ||c||_1=1.72957274e-11 Res=1.02679540e-05 MF=0
+ORTHREGA   successfully end ||d||_2=5.46665105e-06 
+ORTHREGA   &  133 &   64 &  137 &   61 &  60 & f=3.50300206e+02 ||c||_1=1.72957274e-11 Res=1.02679540e-05 MF=0
+ORTHREGA   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGA   &  133 &   64 &   80 &   67 &  66 & f=3.50300206e+02 ||c||_1=4.23480001e-11 Res=4.19864587e-06 MF=2 
+ORTHREGA   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGA   &  133 &   64 &   94 &   81 &  80 & f=3.50300206e+02 ||c||_1=4.23480001e-11 Res=4.19864587e-06 MF=4 
+ORTHREGA   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGA   &  133 &   64 &  108 &   95 &  94 & f=3.50300206e+02 ||c||_1=4.23480001e-11 Res=4.19864587e-06 MF=6 

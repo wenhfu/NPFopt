@@ -1,0 +1,24 @@
+LISWET7    alpha=6.18865488e-09 Line search fails 
+LISWET7    &  103 &  100 &   71 &    3 &   2 & f=1.03604254e+01 ||c||_1=8.99280650e-15 Res=4.05244102e+00 MF=0
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   21 &    7 &   6 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=2
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   23 &    9 &   8 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=4
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   25 &   11 &  10 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=6
+LISWET7    alpha=6.18865488e-09 Line search fails 
+LISWET7    &  103 &  100 &   71 &    3 &   2 & f=1.03604254e+01 ||c||_1=8.99280650e-15 Res=4.05244102e+00 MF=0
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   21 &    7 &   6 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=2
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   23 &    9 &   8 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=4
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   25 &   11 &  10 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=6
+LISWET7    alpha=6.18865488e-09 Line search fails 
+LISWET7    &  103 &  100 &   71 &    3 &   2 & f=1.03604254e+01 ||c||_1=8.99280650e-15 Res=4.05244102e+00 MF=0
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   21 &    7 &   6 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=2
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   23 &    9 &   8 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=4
+LISWET7    successfully end ||d||_2=5.93846149e-10 
+LISWET7    &  103 &  100 &   25 &   11 &  10 & f=2.69233596e-01 ||c||_1=6.25277607e-12 Res=1.67480813e-12 MF=6

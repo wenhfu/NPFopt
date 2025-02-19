@@ -1,0 +1,24 @@
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=0
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=2
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=4
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=6
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=0
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=2
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=4
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=6
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=0
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=2
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=4
+OET6       successfully end ||g-A*lambda||<=e, ||c||<=e
+OET6       &    5 &  202 &    2 &    2 &   1 & f=6.66666667e-01 ||c||_1=0.00000000e+00 Res=6.66152990e-16 MF=6

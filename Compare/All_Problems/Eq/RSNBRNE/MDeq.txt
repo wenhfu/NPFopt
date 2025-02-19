@@ -1,0 +1,22 @@
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &   22 &    8 &   7 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=0
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=8.88178420e-15 Res=0.00000000e+00 MF=2 
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &   22 &    8 &   7 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=0
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=8.88178420e-15 Res=0.00000000e+00 MF=2 
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=8.88178420e-15 Res=0.00000000e+00 MF=4 
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=8.88178420e-15 Res=0.00000000e+00 MF=6 
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &   22 &    8 &   7 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=0
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &   22 &    8 &   7 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=0
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=8.88178420e-15 Res=0.00000000e+00 MF=2 
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=8.88178420e-15 Res=0.00000000e+00 MF=4 
+RSNBRNE    successfully end ||g-A*lambda||<=e, ||c||<=e
+RSNBRNE    &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=8.88178420e-15 Res=0.00000000e+00 MF=6 

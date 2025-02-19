@@ -1,0 +1,22 @@
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=0
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=2 
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=0
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=2 
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=4 
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=6 
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=0
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=0
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=2 
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=4 
+HS40       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS40       &    4 &    3 &    7 &    7 &   6 & f=-2.50000001e-01 ||c||_1=1.15371157e-09 Res=2.03315559e-08 MF=6 

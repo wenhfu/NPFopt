@@ -1,0 +1,22 @@
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   11 &   10 &   9 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=0
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   13 &   12 &  11 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=2 
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   11 &   10 &   9 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=0
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   13 &   12 &  11 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=2 
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   13 &   12 &  11 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=4 
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   13 &   12 &  11 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=6 
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   11 &   10 &   9 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=0
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   11 &   10 &   9 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=0
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   13 &   12 &  11 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=2 
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   13 &   12 &  11 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=4 
+HS79       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS79       &    5 &    3 &   13 &   12 &  11 & f=7.87768223e-02 ||c||_1=3.95984079e-08 Res=9.50896010e-06 MF=6 

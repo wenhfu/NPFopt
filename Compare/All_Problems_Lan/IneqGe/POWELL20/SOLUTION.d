@@ -1,0 +1,40 @@
+*   Lancelot solution for problem name: POWELL20
+*   penalty parameter value is   1.0000D-03
+
+*   variables 
+
+    SOLUTION  X1         2.75000D+00
+    SOLUTION  X2         1.25000D+00
+    SOLUTION  X3         2.75000D+00
+    SOLUTION  X4        -7.50001D-01
+    SOLUTION  X5         2.75000D+00
+    SOLUTION  X6        -2.75000D+00
+    SOLUTION  X7         2.75000D+00
+    SOLUTION  X8        -4.75000D+00
+    SOLUTION  X9         2.75000D+00
+    SOLUTION  X10       -6.75000D+00
+    SOLUTION  CON1       0.00000D+00
+    SOLUTION  CON2       0.00000D+00
+    SOLUTION  CON3       0.00000D+00
+    SOLUTION  CON4       0.00000D+00
+    SOLUTION  CON5       1.26266D-06
+    SOLUTION  CON6       0.00000D+00
+    SOLUTION  CON7       1.00779D-09
+    SOLUTION  CON8       0.00000D+00
+    SOLUTION  CON9       0.00000D+00
+    SOLUTION  CON10      0.00000D+00
+
+*   Lagrange multipliers 
+
+    SOLUTION  CON1      -6.00000D+00
+    SOLUTION  CON2      -4.75000D+00
+    SOLUTION  CON3      -2.00000D+00
+    SOLUTION  CON4      -2.75000D+00
+    SOLUTION  CON5      -1.27066D-18
+    SOLUTION  CON6      -2.75000D+00
+    SOLUTION  CON7       1.29278D-13
+    SOLUTION  CON8      -4.75000D+00
+    SOLUTION  CON9      -2.00000D+00
+    SOLUTION  CON10     -8.75000D+00
+
+ XL SOLUTION             5.78125D+01

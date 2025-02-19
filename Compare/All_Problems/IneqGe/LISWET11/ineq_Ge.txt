@@ -1,0 +1,24 @@
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=0
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=2
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=4
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=6
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=0
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=2
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=4
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=6
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=0
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=2
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=4
+LISWET11   successfully end ||g-A*lambda||<=e, ||c||<=e
+LISWET11   &  103 &  100 &    2 &    2 &   1 & f=1.66612196e+00 ||c||_1=0.00000000e+00 Res=9.93110211e-12 MF=6

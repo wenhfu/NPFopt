@@ -1,0 +1,26 @@
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=0
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=2 
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=0
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=2 
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=4 
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=6 
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=0
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=2 
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=0
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=2 
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=4 
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=6 
+DTOC5      successfully end ||g-A*lambda||<=e, ||c||<=e
+DTOC5      &  199 &   99 &   11 &   11 &  10 & f=5.15899157e-10 ||c||_1=2.50025661e-10 Res=4.52524533e-06 MF=0

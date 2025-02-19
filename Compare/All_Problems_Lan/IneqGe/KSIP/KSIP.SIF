@@ -1,0 +1,140 @@
+***************************
+* SET UP THE INITIAL DATA *
+***************************
+
+NAME          KSIP
+
+*   Problem :
+*   *********
+
+*   Source: problem from Kortanek and No
+*   The problem is really a semi-infinite QP
+*   to appear in SIAM J. Optimization.
+
+*   The structure is the following :
+
+
+*     min  "Sum"{ Xj^2/(2j) + Xj/j  ;  j=1,...,n }   subject to
+
+*      "Sum"{ t^(j-1)*Xj } ; j=1,...,n  >=  b(t) for all t in [0 1].
+
+
+* Four examples are considered for n = 20, corresponding to the RHS
+* function, b(t) : sin(t), 1/(2-t), exp(t), and tan(t).
+
+* The interval [0 1] is dicretized via steps of 1/1000
+
+*   SIF input: A.R. Conn, May 1993
+
+*   classification QLR2-AN-20-1001
+
+*   some useful parameters, including N, the number of variables.
+
+ IE N                   20
+ IE M                   1000
+ IA MP1       M         1
+ RI MR        M
+
+
+ IE 1                   1
+ IE 2                   2
+
+VARIABLES
+
+ DO J         1                        N
+ X  X(J)
+ ND
+
+GROUPS
+
+ XG CON(1)    X(1)      1.0
+
+ DO J         1                        N
+ RI JR        J
+ RA JM1       JR        -1.0
+ RD JINV      JR        1.0
+ ZN OBJ       X(J)                     JINV
+ DO I         2                        MP1
+ RI IR        I
+ RA IRM1      IR        -1.0
+ R/ T         IRM1                     MR
+ R( LOGT      LOG                      T
+ R* PROD      LOGT                     JM1
+ R( FACT      EXP                      PROD
+ ZG CON(I)    X(J)                     FACT
+ ND
+
+CONSTANTS
+
+ DO I         1                        MP1
+ RI IR        I
+ RA IRM1      IR        -1.0
+ R/ T         IRM1                     MR
+ R( RHS       SIN                      T
+*RM MT        T         -1.0
+*RA TOMT      MT        2.0
+*RD RHS       TOMT      1.0
+*R( RHS       EXP                      T
+*R( RHS       TAN                      T
+ Z  KSIP      CON(I)                   RHS
+ ND
+
+BOUNDS
+
+ FR KSIP      'DEFAULT'
+
+
+START POINT
+
+ XV KSIP      'DEFAULT' 2.0
+
+ELEMENT TYPE
+
+ EV PSQ       V1
+ EP PSQ       P
+
+ELEMENT USES
+
+ DO J         1                        N
+ XT E(J)      PSQ
+ ZV E(J)      V1                       X(J)
+ RI JR        J
+ RM J2        JR        2.0
+ RD J2INV     J2        1.0
+ ZP E(J)      P                        J2INV
+ ND
+
+GROUP USES
+
+ DO J         1                        N
+ XE OBJ       E(J)
+ ND
+
+OBJECT BOUND
+
+*   Solution
+
+*LO SOLTN               0.57579024357147
+*LO SOLTN               0.83698795482016
+*LO SOLTN               2.51159511773383
+*LO SOLTN               0.76079933215965
+
+
+ENDATA
+
+***********************
+* SET UP THE FUNCTION *
+* AND RANGE ROUTINES  *
+***********************
+
+ELEMENTS      KSIP
+
+INDIVIDUALS
+
+ T  PSQ
+ F                      P * V1**2
+ G  V1                  2.0 * P * V1
+ H  V1        V1        2.0 * P
+
+ENDATA
+

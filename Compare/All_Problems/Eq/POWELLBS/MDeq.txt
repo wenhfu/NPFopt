@@ -1,0 +1,22 @@
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &  184 &   41 &  40 & f=0.00000000e+00 ||c||_1=4.30772018e-06 Res=0.00000000e+00 MF=0
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &  136 &   67 &  66 & f=0.00000000e+00 ||c||_1=3.46014010e-07 Res=0.00000000e+00 MF=2 
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &  184 &   41 &  40 & f=0.00000000e+00 ||c||_1=4.30772018e-06 Res=0.00000000e+00 MF=0
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &  136 &   67 &  66 & f=0.00000000e+00 ||c||_1=3.46014010e-07 Res=0.00000000e+00 MF=2 
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &   12 &   12 &  11 & f=0.00000000e+00 ||c||_1=7.88667175e-07 Res=0.00000000e+00 MF=4 
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &   12 &   12 &  11 & f=0.00000000e+00 ||c||_1=7.88667175e-07 Res=0.00000000e+00 MF=6 
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &  184 &   41 &  40 & f=0.00000000e+00 ||c||_1=4.30772018e-06 Res=0.00000000e+00 MF=0
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &  184 &   41 &  40 & f=0.00000000e+00 ||c||_1=4.30772018e-06 Res=0.00000000e+00 MF=0
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &  136 &   67 &  66 & f=0.00000000e+00 ||c||_1=3.46014010e-07 Res=0.00000000e+00 MF=2 
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &   12 &   12 &  11 & f=0.00000000e+00 ||c||_1=7.88667175e-07 Res=0.00000000e+00 MF=4 
+POWELLBS   successfully end ||g-A*lambda||<=e, ||c||<=e
+POWELLBS   &    2 &    2 &   12 &   12 &  11 & f=0.00000000e+00 ||c||_1=7.88667175e-07 Res=0.00000000e+00 MF=6 

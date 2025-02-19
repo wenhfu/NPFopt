@@ -1,0 +1,22 @@
+HS51       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS51       &    5 &    3 &   18 &   10 &   9 & f=6.36019105e-30 ||c||_1=0.00000000e+00 Res=5.23718310e-15 MF=0
+HS51       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS51       &    5 &    3 &   27 &   19 &  18 & f=6.36019105e-30 ||c||_1=0.00000000e+00 Res=5.23718310e-15 MF=2 
+HS51       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS51       &    5 &    3 &   18 &   10 &   9 & f=6.36019105e-30 ||c||_1=0.00000000e+00 Res=5.23718310e-15 MF=0
+HS51       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS51       &    5 &    3 &   27 &   19 &  18 & f=6.36019105e-30 ||c||_1=0.00000000e+00 Res=5.23718310e-15 MF=2 
+HS51       alpha=6.18865488e-09 Line search fails 
+HS51       &    5 &    3 &   65 &   25 &  24 & f=1.23736423e-10 ||c||_1=0.00000000e+00 Res=2.57127958e-05 MF=4 
+HS51       successfully end ||d||_2=4.76264759e-06 
+HS51       &    5 &    3 &   33 &   30 &  29 & f=2.76542466e-11 ||c||_1=2.22044605e-16 Res=1.21556340e-05 MF=6 
+HS51       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS51       &    5 &    3 &   18 &   10 &   9 & f=6.36019105e-30 ||c||_1=0.00000000e+00 Res=5.23718310e-15 MF=0
+HS51       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS51       &    5 &    3 &   18 &   10 &   9 & f=6.36019105e-30 ||c||_1=0.00000000e+00 Res=5.23718310e-15 MF=0
+HS51       successfully end ||g-A*lambda||<=e, ||c||<=e
+HS51       &    5 &    3 &   27 &   19 &  18 & f=6.36019105e-30 ||c||_1=0.00000000e+00 Res=5.23718310e-15 MF=2 
+HS51       alpha=6.18865488e-09 Line search fails 
+HS51       &    5 &    3 &   65 &   25 &  24 & f=1.23736423e-10 ||c||_1=0.00000000e+00 Res=2.57127958e-05 MF=4 
+HS51       successfully end ||d||_2=4.76264759e-06 
+HS51       &    5 &    3 &   33 &   30 &  29 & f=2.76542466e-11 ||c||_1=2.22044605e-16 Res=1.21556340e-05 MF=6 

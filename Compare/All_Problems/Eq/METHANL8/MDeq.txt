@@ -1,0 +1,22 @@
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=0
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=2 
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=0
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=2 
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=4 
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=6 
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=0
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=0
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=2 
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=4 
+METHANL8   successfully end ||g-A*lambda||<=e, ||c||<=e
+METHANL8   &   31 &   31 &    5 &    5 &   4 & f=0.00000000e+00 ||c||_1=8.34179563e-11 Res=0.00000000e+00 MF=6 

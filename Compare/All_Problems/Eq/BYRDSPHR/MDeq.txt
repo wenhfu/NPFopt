@@ -1,0 +1,32 @@
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &   18 &    9 &   8 & f=-4.68330013e+00 ||c||_1=8.77173889e-10 Res=3.16562750e-06 MF=0
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=2 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=2 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=2 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=2 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &   18 &    9 &   8 & f=-4.68330013e+00 ||c||_1=8.77173889e-10 Res=3.16562750e-06 MF=0
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=2 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=4 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=6 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &   18 &    9 &   8 & f=-4.68330013e+00 ||c||_1=8.77173889e-10 Res=3.16562750e-06 MF=0
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=2 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &   18 &    9 &   8 & f=-4.68330013e+00 ||c||_1=8.77173889e-10 Res=3.16562750e-06 MF=0
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=2 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=4 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &    8 &    8 &   7 & f=-4.68330013e+00 ||c||_1=1.88711269e-10 Res=4.97105545e-06 MF=6 
+BYRDSPHR   successfully end ||g-A*lambda||<=e, ||c||<=e
+BYRDSPHR   &    3 &    2 &   18 &    9 &   8 & f=-4.68330013e+00 ||c||_1=8.77173889e-10 Res=3.16562750e-06 MF=0

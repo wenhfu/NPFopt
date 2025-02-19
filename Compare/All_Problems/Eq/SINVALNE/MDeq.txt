@@ -1,0 +1,22 @@
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &   30 &    6 &   5 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=0
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=2 
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &   30 &    6 &   5 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=0
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=2 
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=4 
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=6 
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &   30 &    6 &   5 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=0
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &   30 &    6 &   5 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=0
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=2 
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=4 
+SINVALNE   successfully end ||g-A*lambda||<=e, ||c||<=e
+SINVALNE   &    2 &    2 &    3 &    3 &   2 & f=0.00000000e+00 ||c||_1=0.00000000e+00 Res=0.00000000e+00 MF=6 

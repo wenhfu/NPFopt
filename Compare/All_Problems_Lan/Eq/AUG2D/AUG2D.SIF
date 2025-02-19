@@ -1,0 +1,192 @@
+***************************
+* SET UP THE INITIAL DATA *
+***************************
+
+NAME          AUG2D
+
+*   Problem :
+*   *********
+
+*   An expanded system formulation of a 2-D PDE system.
+
+*   A five-point discretization of Laplace's equation in a 
+*   rectangular domain may be expressed in the form 
+
+*         - M v = b, 
+
+*   where M = sum a_i a_i^T. Letting A = (a_1 .... a_m), 
+*   this system may be expanded as
+
+*          ( I   A^T ) (x) = (0),
+*          ( A    0  ) (v)   (b)
+
+*   which is then equivalent to solving the EQP 
+*   minimize 1/2 || x ||_2^2   s.t.    A x = b
+
+*   In this variant, we replace the leading I block in the
+*   above formulation with a zero-one diagonal matrix D.
+*   This corresponds to certain boundary conditions.
+*   The resulting QP is thus convex but not strictly convex.
+
+*   SIF input: Nick Gould, February 1994
+
+*   classification QLR2-AN-V-V
+
+*   Number of nodes in x direction
+
+*IE NX                  3              $-PARAMETER
+ IE NX                  10             $-PARAMETER
+*IE NX                  40             $-PARAMETER
+*IE NX                  100            $-PARAMETER
+*IE NX                  200            $-PARAMETER
+
+*   Number of nodes in y direction
+
+*IE NY                  3              $-PARAMETER
+ IE NY                  10             $-PARAMETER 
+*IE NY                  40             $-PARAMETER
+*IE NY                  100            $-PARAMETER
+*IE NY                  200            $-PARAMETER
+
+*   Other useful parameters
+
+ IA X+        NX        1
+ IA X-        NX        -1
+ IA Y+        NY        1
+ IA Y-        NY        -1
+ IE 1                   1
+ IE 0                   0
+
+*  It is easier to describe this problem by columns.
+
+GROUPS
+
+* objective function
+
+ DO J         1                        Y-
+ DO I         1                        X-
+
+ XN OX(I,J)
+ XN OY(I,J)
+
+ ND
+
+ DO I         1                        X-
+ XN OX(I,NY)
+ ND
+
+ DO J         1                        Y-
+ XN OY(NX,J)
+ ND
+
+* constraints
+
+ DO J         1                        NY
+ DO I         1                        NX
+
+ XE V(I,J)
+
+ ND
+
+VARIABLES
+
+* objective function terms
+
+ DO J         1                        Y-
+ DO I         1                        X-
+
+ X  X(I,J)    OX(I,J)   1.0
+ X  Y(I,J)    OY(I,J)   1.0
+
+ ND
+
+ DO I         1                        X-
+ X  X(I,NY)   OX(I,NY)  1.0
+ ND
+
+ DO J         1                        Y-
+ X  Y(NX,J)   OY(NX,J)  1.0
+ ND
+
+* constraints : central constraints
+
+ DO J         1                        Y-
+ IA J+        J         1
+
+ DO I         1                        X-
+ IA I+        I         1
+
+ X  X(I,J)    V(I,J)    1.0            V(I+,J)   -1.0
+ X  Y(I,J)    V(I,J)    1.0            V(I,J+)   -1.0
+
+ ND
+
+ DO I         1                        X-
+ IA I+        I         1
+ X  X(I,NY)   V(I,NY)   1.0            V(I+,NY)  -1.0
+ ND
+
+ DO J         1                        Y-
+ IA J+        J         1
+ X  Y(NX,J)   V(NX,J)   1.0            V(NX,J+)  -1.0
+ ND
+
+*  edge constraints
+
+ DO I         1                        NX
+ X  X(I,0)    V(I,1)    1.0
+ X  X(I,Y+)   V(I,NY)   1.0
+ ND
+
+ DO J         1                        NY
+ X  Y(0,J)    V(1,J)    1.0
+ X  Y(X+,J)   V(NX,J)   1.0
+ ND
+
+CONSTANTS
+
+ X  AUG2D     'DEFAULT' 1.0
+
+BOUNDS
+
+ FR AUG2D     'DEFAULT'
+
+GROUP TYPE
+
+ GV SQUARE    ALPHA
+
+GROUP USES
+
+ DO J         1                        Y-
+ DO I         1                        X-
+
+ XT OX(I,J)   SQUARE
+ XT OY(I,J)   SQUARE
+
+ ND
+
+ DO I         1                        X-
+ XT OX(I,NY)  SQUARE
+ ND
+
+ DO J         1                        Y-
+ XT OY(NX,J)  SQUARE
+ ND
+
+ENDATA
+
+***********************
+* SET UP THE FUNCTION *
+* AND RANGE ROUTINES  *
+***********************
+
+GROUPS        AUG2D
+
+INDIVIDUALS
+
+ T  SQUARE
+ F                      5.0D-1 * ALPHA * ALPHA
+ G                      ALPHA
+ H                      1.0D+0
+
+ENDATA

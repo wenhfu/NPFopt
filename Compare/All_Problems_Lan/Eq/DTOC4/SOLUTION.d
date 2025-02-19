@@ -1,0 +1,57 @@
+*   Lancelot solution for problem name: DTOC4   
+*   penalty parameter value is   1.0000D-03
+
+*   variables 
+
+    SOLUTION  X1         1.07342D-01
+    SOLUTION  X2         8.87886D-01
+    SOLUTION  X3         1.15406D+00
+    SOLUTION  X4         1.03920D+00
+    SOLUTION  X5         7.72133D-01
+    SOLUTION  X6         4.97564D-01
+    SOLUTION  X7         2.75687D-01
+    SOLUTION  X8         1.21070D-01
+    SOLUTION  X9         2.97348D-02
+    SOLUTION  Y1,1       0.00000D+00
+    SOLUTION  Y1,2       1.00000D+00
+    SOLUTION  Y2,1      -4.46332D-01
+    SOLUTION  Y2,2       9.99997D-01
+    SOLUTION  Y3,1      -5.02389D-01
+    SOLUTION  Y3,2       7.76828D-01
+    SOLUTION  Y4,1      -4.13382D-01
+    SOLUTION  Y4,2       5.25629D-01
+    SOLUTION  Y5,1      -3.06176D-01
+    SOLUTION  Y5,2       3.18933D-01
+    SOLUTION  Y6,1      -2.17089D-01
+    SOLUTION  Y6,2       1.65842D-01
+    SOLUTION  Y7,1      -1.56785D-01
+    SOLUTION  Y7,2       5.72961D-02
+    SOLUTION  Y8,1      -1.25723D-01
+    SOLUTION  Y8,2      -2.10970D-02
+    SOLUTION  Y9,1      -1.17472D-01
+    SOLUTION  Y9,2      -8.39586D-02
+    SOLUTION  Y10,1     -1.18947D-01
+    SOLUTION  Y10,2     -1.42695D-01
+
+*   Lagrange multipliers 
+
+    SOLUTION  TT1,1     -2.14683D-01
+    SOLUTION  TT1,2      5.11015D+00
+    SOLUTION  TT2,1     -1.77577D+00
+    SOLUTION  TT2,2      4.01484D+00
+    SOLUTION  TT3,1     -2.30812D+00
+    SOLUTION  TT3,2      2.98475D+00
+    SOLUTION  TT4,1     -2.07841D+00
+    SOLUTION  TT4,2      1.87152D+00
+    SOLUTION  TT5,1     -1.54427D+00
+    SOLUTION  TT5,2      9.31250D-01
+    SOLUTION  TT6,1     -9.95129D-01
+    SOLUTION  TT6,2      3.03669D-01
+    SOLUTION  TT7,1     -5.51377D-01
+    SOLUTION  TT7,2     -2.43642D-02
+    SOLUTION  TT8,1     -2.42143D-01
+    SOLUTION  TT8,2     -1.24983D-01
+    SOLUTION  TT9,1     -5.94715D-02
+    SOLUTION  TT9,2     -7.13473D-02
+
+ XL SOLUTION             3.75075D+00

@@ -1,0 +1,290 @@
+***************************
+* SET UP THE INITIAL DATA *
+***************************
+
+NAME          LCH
+
+*   Problem :
+*   *********
+
+*   A minimum energy problem in quantum physics.
+
+*   Source:
+*   Leonor Cruzeiro-Hasson (private communication).
+
+*   SIF input: Nick Gould, Feb 1991.
+
+*   classification OOR2-MY-V-1
+
+*   N is the number of discretization points.
+
+*IE N                   10             $-PARAMETER n = 30
+*IE N                   50             $-PARAMETER n = 150
+ IE N                   100            $-PARAMETER n = 300  original value
+*IE N                   200            $-PARAMETER n = 600
+*IE N                   1000           $-PARAMETER n = 3000
+
+*   problem constants
+
+ RE J                   1.549429
+ RE K                   650.0
+ RE X1                  62.0
+ RE X2                  62.0
+
+*   Define useful parameters
+
+ IE 1                   1
+ IE 2                   2
+ IA N-1       N         -1
+
+ RM -J        J         -1.0
+
+ IM 2N        N         2
+ RI 2RN       2N
+ RD 1/2RN     2RN       1.0
+ R( STARTP    SQRT                     1/2RN
+ RM A         X1        -1.0
+ R- B         X1                       X2
+ R= C         X2
+ RE UVALUE              0.0
+
+VARIABLES
+
+ DO I         1                        N
+ X  PR(I)
+ X  PI(I)
+ X  U(I)
+ ND
+
+GROUPS
+
+ N  H
+ E  CON
+
+CONSTANTS
+
+    LCH       CON        1.0
+
+BOUNDS
+
+ FR LCH       'DEFAULT'
+
+START POINT
+
+ DO I         1                        N
+ RA UVALUE    UVALUE     0.1
+ Z  LCH       PR(I)                    STARTP
+ Z  LCH       PI(I)                    STARTP
+ Z  LCH       U(I)                     UVALUE
+ ND
+
+ELEMENT TYPE
+
+ EV SQ        V
+
+ EV DIFSQ     X                        Y
+ IV DIFSQ     V
+
+ EV PROD      U                        V
+ EV PROD      W
+ IV PROD      Y                        Z
+
+ EV PROD2     U                        V
+ EV PROD2     W                        X
+ EV PROD2     Y
+ EP PROD2     A                        B
+ EP PROD2     C
+
+
+ELEMENT USES
+
+*   first contributions to the objective function
+
+ XT OBJR1     PROD
+ ZV OBJR1     U                        PR1
+ ZV OBJR1     V                        PR(N)
+ ZV OBJR1     W                        PR2
+
+ XT OBJI1     PROD
+ ZV OBJI1     U                        PI1
+ ZV OBJI1     V                        PI(N)
+ ZV OBJI1     W                        PI2
+
+ XT OBJM1     PROD2
+ ZV OBJM1     U                        U(N)
+ ZV OBJM1     V                        U1
+ ZV OBJM1     W                        U2
+ ZV OBJM1     X                        PR1
+ ZV OBJM1     Y                        PI1
+ ZP OBJM1     A                        A
+ ZP OBJM1     B                        B
+ ZP OBJM1     C                        C
+
+ XT OBJD1     DIFSQ
+ ZV OBJD1     X                        U(N)
+ ZV OBJD1     Y                        U1
+
+*   first contributions to the nonlinear constraint
+
+ XT REALC1    SQ
+ ZV REALC1    V                        PR1
+
+ XT IMAGC1    SQ
+ ZV IMAGC1    V                        PI1
+
+ DO I         2                        N-1
+
+ IA I+1       I          1
+ IA I-1       I          -1
+
+*   general contributions to the objective function
+
+ XT OBJR(I)   PROD
+ ZV OBJR(I)   U                        PR(I)
+ ZV OBJR(I)   V                        PR(I-1)
+ ZV OBJR(I)   W                        PR(I+1)
+
+ XT OBJI(I)   PROD
+ ZV OBJI(I)   U                        PI(I)
+ ZV OBJI(I)   V                        PI(I-1)
+ ZV OBJI(I)   W                        PI(I+1)
+
+ XT OBJM(I)   PROD2
+ ZV OBJM(I)   U                        U(I-1)
+ ZV OBJM(I)   V                        U(I)
+ ZV OBJM(I)   W                        U(I+1)
+ ZV OBJM(I)   X                        PR(I)
+ ZV OBJM(I)   Y                        PI(I)
+ ZP OBJM(I)   A                        A
+ ZP OBJM(I)   B                        B
+ ZP OBJM(I)   C                        C
+
+ XT OBJD(I)   DIFSQ
+ ZV OBJD(I)   X                        U(I-1)
+ ZV OBJD(I)   Y                        U(I)
+
+*   general contributions to the nonlinear constraint
+
+ XT REALC(I)  SQ
+ ZV REALC(I)  V                        PR(I)
+
+ XT IMAGC(I)  SQ
+ ZV IMAGC(I)  V                        PI(I)
+
+ ND
+
+*   last contributions to the objective function
+
+ XT OBJR(N)   PROD
+ ZV OBJR(N)   U                        PR(N)
+ ZV OBJR(N)   V                        PR(N-1)
+ ZV OBJR(N)   W                        PR1
+
+ XT OBJI(N)   PROD
+ ZV OBJI(N)   U                        PI(N)
+ ZV OBJI(N)   V                        PI(N-1)
+ ZV OBJI(N)   W                        PI1
+
+ XT OBJM(N)   PROD2
+ ZV OBJM(N)   U                        U(N-1)
+ ZV OBJM(N)   V                        U(N)
+ ZV OBJM(N)   W                        U1
+ ZV OBJM(N)   X                        PR(N)
+ ZV OBJM(N)   Y                        PI(N)
+ ZP OBJM(N)   A                        A
+ ZP OBJM(N)   B                        B
+ ZP OBJM(N)   C                        C
+
+ XT OBJD(N)   DIFSQ
+ ZV OBJD(N)   X                        U(N-1)
+ ZV OBJD(N)   Y                        U(N)
+
+*   last contributions to the nonlinear constraint
+
+ XT REALC(N)  SQ
+ ZV REALC(N)  V                        PR(N)
+
+ XT IMAGC(N)  SQ
+ ZV IMAGC(N)  V                        PI(N)
+
+GROUP USES
+
+ DO I         1                        N
+ ZE H         OBJR(I)                  -J
+ ZE H         OBJI(I)                  -J
+ XE H         OBJM(I)
+ ZE H         OBJD(I)                  K
+ XE CON       REALC(I)                 IMAGC(I)
+ ND
+
+OBJECT BOUND
+
+*   Solution
+
+*LO SOLTN(10)          -3.7565286
+*LO SOLTN(50)          -4.2295940
+*LO SOLTN(100)         -4.2887306
+*LO SOLTN(200)         -4.2887306
+
+ENDATA
+
+***********************
+* SET UP THE FUNCTION *
+* AND RANGE ROUTINES  *
+***********************
+
+ELEMENTS      LCH
+
+TEMPORARIES
+
+ R  P1
+ R  P2
+
+INDIVIDUALS
+
+*   square type element v**2
+
+ T  SQ
+ F                      V * V
+ G  V                   V + V
+ H  V         V         2.0
+
+*   difference of square type element v**2 , where v = x - y
+
+ T  DIFSQ
+ R  V         X         1.0            Y         -1.0
+ F                      V * V
+ G  V                   V + V
+ H  V         V         2.0
+
+*   product type element y * z, where y = u and z = v + w
+
+ T  PROD
+ R  Y         U         1.0
+ R  Z         V         1.0            W         1.0
+ F                      Y * Z
+ G  Y                   Z
+ G  Z                   Y
+ H  Y         Z         1.0
+
+*   more complicated product ( a u + b v + c w ) ( x**2 + y**2 )
+
+ T  PROD2
+ A  P1                  A * U + B * V + C * W
+ A  P2                  X * X + Y * Y
+ F                      P1 * P2
+ G  U                   A * P2
+ G  V                   B * P2
+ G  W                   C * P2
+ G  X                   2.0 * P1 * X
+ G  Y                   2.0 * P1 * Y
+ H  U         X         2.0 * A * X
+ H  U         Y         2.0 * A * Y
+ H  V         X         2.0 * B * X
+ H  V         Y         2.0 * B * Y
+ H  W         X         2.0 * C * X
+ H  W         Y         2.0 * C * Y
+ H  X         X         2.0 * P1
+ H  Y         Y         2.0 * P1
+
+ENDATA

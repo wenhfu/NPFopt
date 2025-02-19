@@ -1,0 +1,18 @@
+HATFLDF    &    3 &    3 & 7546 &  302 & 301 & f=0.00000000e+00 ||c||_1=2.37859688e-02 Res=0.00000000e+00 MF=0
+HATFLDF    successfully end ||g-A*lambda||<=e, ||c||<=e
+HATFLDF    &    3 &    3 &    8 &    8 &   7 & f=0.00000000e+00 ||c||_1=3.54341990e-06 Res=0.00000000e+00 MF=2 
+HATFLDF    &    3 &    3 & 6835 &  274 & 273 & f=0.00000000e+00 ||c||_1=2.37863023e-02 Res=0.00000000e+00 MF=0
+HATFLDF    successfully end ||g-A*lambda||<=e, ||c||<=e
+HATFLDF    &    3 &    3 &    8 &    8 &   7 & f=0.00000000e+00 ||c||_1=3.54341990e-06 Res=0.00000000e+00 MF=2 
+HATFLDF    successfully end ||g-A*lambda||<=e, ||c||<=e
+HATFLDF    &    3 &    3 &    8 &    8 &   7 & f=0.00000000e+00 ||c||_1=3.54341990e-06 Res=0.00000000e+00 MF=4 
+HATFLDF    successfully end ||g-A*lambda||<=e, ||c||<=e
+HATFLDF    &    3 &    3 &    8 &    8 &   7 & f=0.00000000e+00 ||c||_1=3.54341990e-06 Res=0.00000000e+00 MF=6 
+HATFLDF    &    3 &    3 & 6835 &  274 & 273 & f=0.00000000e+00 ||c||_1=2.37863023e-02 Res=0.00000000e+00 MF=0
+HATFLDF    &    3 &    3 & 6835 &  274 & 273 & f=0.00000000e+00 ||c||_1=2.37863023e-02 Res=0.00000000e+00 MF=0
+HATFLDF    successfully end ||g-A*lambda||<=e, ||c||<=e
+HATFLDF    &    3 &    3 &    8 &    8 &   7 & f=0.00000000e+00 ||c||_1=3.54341990e-06 Res=0.00000000e+00 MF=2 
+HATFLDF    successfully end ||g-A*lambda||<=e, ||c||<=e
+HATFLDF    &    3 &    3 &    8 &    8 &   7 & f=0.00000000e+00 ||c||_1=3.54341990e-06 Res=0.00000000e+00 MF=4 
+HATFLDF    successfully end ||g-A*lambda||<=e, ||c||<=e
+HATFLDF    &    3 &    3 &    8 &    8 &   7 & f=0.00000000e+00 ||c||_1=3.54341990e-06 Res=0.00000000e+00 MF=6 

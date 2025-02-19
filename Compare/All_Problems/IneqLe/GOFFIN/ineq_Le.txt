@@ -1,0 +1,18 @@
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=0
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=0
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=2
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=4
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=6
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=0
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=2
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=4
+GOFFIN     successfully end ||g-A*lambda||<=e, ||c||<=e
+GOFFIN     &   51 &   50 &    2 &    2 &   1 & f=1.83139535e+01 ||c||_1=0.00000000e+00 Res=2.56018152e-15 MF=6

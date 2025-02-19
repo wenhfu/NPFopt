@@ -1,0 +1,22 @@
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=0
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=2 
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=0
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=2 
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=4 
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=6 
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=0
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=0
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=2 
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=4 
+ORTHREGB   successfully end ||g-A*lambda||<=e, ||c||<=e
+ORTHREGB   &   27 &    6 &    7 &    7 &   6 & f=4.33243779e-12 ||c||_1=1.93133044e-11 Res=4.16287587e-06 MF=6 

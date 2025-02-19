@@ -1,0 +1,16 @@
+POLAK5     successfully end ||g-A*lambda||<=e, ||c||<=e
+POLAK5     &    3 &    2 &    4 &    4 &   3 & f=5.00000000e+01 ||c||_1=0.00000000e+00 Res=6.19639621e-11 MF=0
+POLAK5     successfully end ||g-A*lambda||<=e, ||c||<=e
+POLAK5     &    3 &    2 &    4 &    4 &   3 & f=5.00000000e+01 ||c||_1=0.00000000e+00 Res=6.19639621e-11 MF=2
+POLAK5     successfully end ||g-A*lambda||<=e, ||c||<=e
+POLAK5     &    3 &    2 &    4 &    4 &   3 & f=5.00000000e+01 ||c||_1=0.00000000e+00 Res=6.19639621e-11 MF=4
+POLAK5     successfully end ||g-A*lambda||<=e, ||c||<=e
+POLAK5     &    3 &    2 &    4 &    4 &   3 & f=5.00000000e+01 ||c||_1=0.00000000e+00 Res=6.19639621e-11 MF=6
+POLAK5     successfully end ||g-A*lambda||<=e, ||c||<=e
+POLAK5     &    3 &    2 &    4 &    4 &   3 & f=5.00000000e+01 ||c||_1=0.00000000e+00 Res=6.19639621e-11 MF=0
+POLAK5     successfully end ||g-A*lambda||<=e, ||c||<=e
+POLAK5     &    3 &    2 &    4 &    4 &   3 & f=5.00000000e+01 ||c||_1=0.00000000e+00 Res=6.19639621e-11 MF=2
+POLAK5     successfully end ||g-A*lambda||<=e, ||c||<=e
+POLAK5     &    3 &    2 &    4 &    4 &   3 & f=5.00000000e+01 ||c||_1=0.00000000e+00 Res=6.19639621e-11 MF=4
+POLAK5     successfully end ||g-A*lambda||<=e, ||c||<=e
+POLAK5     &    3 &    2 &    4 &    4 &   3 & f=5.00000000e+01 ||c||_1=0.00000000e+00 Res=6.19639621e-11 MF=6

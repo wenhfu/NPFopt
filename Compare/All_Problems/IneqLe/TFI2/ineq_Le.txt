@@ -1,0 +1,16 @@
+TFI2       successfully end ||g-A*lambda||<=e, ||c||<=e
+TFI2       &    3 &  101 &    2 &    2 &   1 & f=7.11009745e-01 ||c||_1=0.00000000e+00 Res=5.55111512e-17 MF=0
+TFI2       successfully end ||g-A*lambda||<=e, ||c||<=e
+TFI2       &    3 &  101 &    2 &    2 &   1 & f=7.11009745e-01 ||c||_1=0.00000000e+00 Res=5.55111512e-17 MF=2
+TFI2       successfully end ||g-A*lambda||<=e, ||c||<=e
+TFI2       &    3 &  101 &    2 &    2 &   1 & f=7.11009745e-01 ||c||_1=0.00000000e+00 Res=5.55111512e-17 MF=4
+TFI2       successfully end ||g-A*lambda||<=e, ||c||<=e
+TFI2       &    3 &  101 &    2 &    2 &   1 & f=7.11009745e-01 ||c||_1=0.00000000e+00 Res=5.55111512e-17 MF=6
+TFI2       successfully end ||g-A*lambda||<=e, ||c||<=e
+TFI2       &    3 &  101 &    2 &    2 &   1 & f=7.11009745e-01 ||c||_1=0.00000000e+00 Res=5.55111512e-17 MF=0
+TFI2       successfully end ||g-A*lambda||<=e, ||c||<=e
+TFI2       &    3 &  101 &    2 &    2 &   1 & f=7.11009745e-01 ||c||_1=0.00000000e+00 Res=5.55111512e-17 MF=2
+TFI2       successfully end ||g-A*lambda||<=e, ||c||<=e
+TFI2       &    3 &  101 &    2 &    2 &   1 & f=7.11009745e-01 ||c||_1=0.00000000e+00 Res=5.55111512e-17 MF=4
+TFI2       successfully end ||g-A*lambda||<=e, ||c||<=e
+TFI2       &    3 &  101 &    2 &    2 &   1 & f=7.11009745e-01 ||c||_1=0.00000000e+00 Res=5.55111512e-17 MF=6
