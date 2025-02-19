@@ -6,33 +6,33 @@
 clear; clc;
 opts.nfmax=5000;
 opts.display=0;
-opts.epsilon=9e-9;
-% opts.epsilon=1e-8;
+opts.epsilon=1e-8;
 con_type = 0;
 MF_all = [0,1,2,3,4,5,6];
 
 %% Results of Tab 1
-fprintf('Results for Tab 1:\n');
+fid = fopen('Example_out.txt','w');
+fprintf(fid,'Results for Tab 1:\n');
 for MF = MF_all
-    fprintf('\nMF  = %4d:\n',MF);
+    fprintf(fid,'\nMF  = %4d:\n',MF);
     for rho = [10,100,1000]
-        fprintf('rho = %4d:   ',rho);
+        fprintf(fid,'rho = %4d:   ',rho);
         % funf = @(x) fx(x,rho);
         % func = @(x) cx(x);
         funf = @(x) deal(-x(1)+rho*(x(1)^2+x(2)^2-1), [-1+2*rho*x(1); 2*rho*x(2)]);
         func = @(x) deal(x(1)^2+x(2)^2-1,[2*x(1), 2*x(2)]);
         x0 = [0.8;0.6];
         [x,fval,exitflag,output,lambda] = NPFopt(funf,func,con_type,x0,MF,opts);
-        fprintf('nit = %4d,  nf = %4d,  ngf = %4d,  ||c(x)|| = %.4e,   Res = %.4e\n',output.iter,output.nf,output.ngf,output.con,output.Res);
+        fprintf(fid,'nit = %4d,  nf = %4d,  ngf = %4d,  ||c(x)|| = %.4e,   Res = %.4e\n',output.iter,output.nf,output.ngf,output.con,output.Res);
     end
 end
 
 %% Results of Tab 2
-fprintf('\nResults for Tab 2\n');
+fprintf(fid,'\nResults for Tab 2\n');
 for MF = MF_all
-    fprintf('\nMF  = %4d:\n',MF);
+    fprintf(fid,'\nMF  = %4d:\n',MF);
     for rho = [10,100,1000]
-        fprintf('rho = %4d:   ',rho);
+        fprintf(fid,'rho = %4d:   ',rho);
         % funf = @(x) fx(x,rho);
         % func = @(x) cx(x);
         funf = @(x) deal(-x(1)+rho*(x(1)^2+x(2)^2-1), [-1+2*rho*x(1); 2*rho*x(2)]);
@@ -40,9 +40,12 @@ for MF = MF_all
         t = 1e-4;
         x0 = [cos(t);sin(t)];
         [x,fval,exitflag,output,lambda] = NPFopt(funf,func,con_type,x0,MF,opts);
-        fprintf('nit = %4d,  nf = %4d,  ngf = %4d,  ||c(x)|| = %.4e,   Res = %.4e\n',output.iter,output.nf,output.ngf,output.con,output.Res);
+        fprintf(fid,'nit = %4d,  nf = %4d,  ngf = %4d,  ||c(x)|| = %.4e,   Res = %.4e\n',output.iter,output.nf,output.ngf,output.con,output.Res);
     end
 end
+
+fclose(fid);
+fileread('Example_out.txt')
 
 % function [f,gf] = fx(x,rho)
 % f = -x(1)+rho*(x(1)^2+x(2)^2-1);

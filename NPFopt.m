@@ -171,7 +171,8 @@ while ((iter<=itermax)&&(nf<=nfmax))
             if alg_display==1
                 fprintf('         QP1 failed           ');disp(output_qp1);
             end
-            flag_Alg=-3;break;end
+            flag_Alg=-3;break
+        end
         if exitflag<=0 && FL>0
             FL=inf;xold=Rxold;fxold=Rfxold;gfxold=Rgfxold;
             cxold=Rcxold;gcxold=Rgcxold;vxold=Rvxold;
@@ -207,7 +208,8 @@ while ((iter<=itermax)&&(nf<=nfmax))
             if alg_display==1
                 fprintf('         QP2 failed           ');disp(output_qp2);
             end
-            flag_Alg=-3;break;end
+            flag_Alg=-3;break
+        end
         if exitflag<=0 && FL>0
             FL=inf;xold=Rxold;fxold=Rfxold;gfxold=Rgfxold;
             cxold=Rcxold;gcxold=Rgcxold;vxold=Rvxold;
@@ -367,7 +369,6 @@ end % for while (iter)
 % Output the computational results
 % Lam=pinv(gcxold)*gfxold;
 % Lam=gcxold\gfxold;
-Res=norm(gfxold-gcxold*Lam);
 if alg_display==1
     if iter>itermax || nf>nfmax
         fprintf('     Reach Max iteration      ');
@@ -383,6 +384,8 @@ output.ngf = ngf;
 output.ngc = ngc;
 output.n=n;
 output.m=meq;
+Lam=pinv(gcxnew)*gfxnew;
+Res=norm(gfxnew-gcxnew*Lam);
 output.Res=Res;
 lambda = Lam;
 end
