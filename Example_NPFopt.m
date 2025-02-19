@@ -6,6 +6,8 @@
 clear; clc;
 opts.nfmax=5000;
 opts.display=0;
+opts.epsilon=9e-9;
+% opts.epsilon=1e-8;
 con_type = 0;
 MF_all = [0,1,2,3,4,5,6];
 

@@ -4,7 +4,7 @@
 % Coded by Wenhao Fu, Feb. 10, 2025.
 %
 % Problem setting:
-%       min       f(x)=-x1+rho*(x1^2+x2^2-1)
+%       min       f(x)
 %  subject to  c(x)=0, c(x)>0, or c(x)<0
 %
 % Input:
