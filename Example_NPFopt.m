@@ -6,7 +6,6 @@
 clear; clc;
 opts.nfmax=5000;
 opts.display=0;
-opts.epsilon=1e-8;
 con_type = 0;
 MF_all = [0,1,2,3,4,5,6];
 
@@ -29,6 +28,7 @@ end
 
 %% Results of Tab 2
 fprintf(fid,'\nResults for Tab 2\n');
+opts.epsilon=1e-9;
 for MF = MF_all
     fprintf(fid,'\nMF  = %4d:\n',MF);
     for rho = [10,100,1000]
