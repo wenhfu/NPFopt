@@ -85,6 +85,16 @@ NitIneqLe = Nit; NitIneqLe_flag = Nit_flag;
 Data_Lancelot = [NitEq;NitIneqGe;NitIneqLe];
 Data_Lancelot_flag = [NitEq_flag;NitIneqGe_flag;NitIneqLe_flag];
 N = size(Data_NPFopt{1},1);
+Nf_Lan = Data_Lancelot(:,3);
+Ng_Lan = Data_Lancelot(:,4);
+Nf_MF0 = Data_NPFopt{1}(:,5);
+Ng_MF0 = Data_NPFopt{1}(:,6);
+Nf_MF2 = Data_NPFopt{2}(:,5);
+Ng_MF2 = Data_NPFopt{2}(:,6);
+Nf_MF4 = Data_NPFopt{3}(:,5);
+Ng_MF4 = Data_NPFopt{3}(:,6);
+Nf_MF6 = Data_NPFopt{4}(:,5);
+Ng_MF6 = Data_NPFopt{4}(:,6);
 Idx_large=[];
 for i=1:N
     if Nf_MF0(i)==0 && Ng_MF0(i)==0
@@ -147,16 +157,6 @@ fclose(fid_output_successful);
 fclose(fid_output_failed);
 
 %% Plot
-Nf_Lan = Data_Lancelot(:,3);
-Ng_Lan = Data_Lancelot(:,4);
-Nf_MF0 = Data_NPFopt{1}(:,5);
-Ng_MF0 = Data_NPFopt{1}(:,6);
-Nf_MF2 = Data_NPFopt{2}(:,5);
-Ng_MF2 = Data_NPFopt{2}(:,6);
-Nf_MF4 = Data_NPFopt{3}(:,5);
-Ng_MF4 = Data_NPFopt{3}(:,6);
-Nf_MF6 = Data_NPFopt{4}(:,5);
-Ng_MF6 = Data_NPFopt{4}(:,6);
 IdxFailed = [];
 n_fail_lan = 0; n_fail_MF0 = 0; n_fail_MF2 = 0; n_fail_MF4 = 0; n_fail_MF6 = 0;
 for i=1:N
