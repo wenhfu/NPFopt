@@ -11,8 +11,8 @@ This repository contains MATLAB scripts used to generate numerical results for c
 - `All_Problems_Lan/`: A folder containing the test results for the Lancelot algorithm.
 - `output_detailed.txt`: A detailed comparison output file.
 - `output_all.txt`: A comparison output file for all problems, output in $\LaTeX$ table format.
-- `output_successful.txt`: A comparison output file for successfully solved problems, output in $\LaTeX$ table format.
-- `output_failed.txt`: A comparison output file for failed problems, output in $\LaTeX$ table format.
+- `output_successful_MF*.txt`: A comparison output file for successfully solved problems with $MF=*$, output in $\LaTeX$ table format.
+- `output_failed_MF*.txt`: A comparison output file for failed problems with $MF=*$, output in $\LaTeX$ table format.
 - `Fig.eps`: The generated performance comparison plot.
 
 ## Usage
@@ -37,4 +37,4 @@ This repository contains MATLAB scripts used to generate numerical results for c
 ## Author
 
 - **Wenhao Fu**: Code development and maintenance.
-- Last Updated: February 19, 2025
+- Last Updated: February 20, 2025
