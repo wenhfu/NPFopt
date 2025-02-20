@@ -85,6 +85,12 @@ NitIneqLe = Nit; NitIneqLe_flag = Nit_flag;
 Data_Lancelot = [NitEq;NitIneqGe;NitIneqLe];
 Data_Lancelot_flag = [NitEq_flag;NitIneqGe_flag;NitIneqLe_flag];
 N = size(Data_NPFopt{1},1);
+Idx_large=[];
+for i=1:N
+    if Nf_MF0(i)==0 && Ng_MF0(i)==0
+        Idx_large=union(Idx_large,i);
+    end
+end
 %% Print to screan
 fprintf('No.    name     n    m   |  lan: f       nf   ng  flag | MF0: f         nf  ng  flag |  MF2: f       nf   ng  flag |  MF4: f       nf   ng  flag |  MF6: f       nf   ng  flag\n');
 for i=1:N
@@ -125,7 +131,7 @@ for i=1:N
             '%4d/%4d/%4d&', ...
             '%4d/%4d/%4d \\\\ \n'], ...
            i,Data_Lancelot_flag{i,3},Data_Lancelot(i,1:2),Data_Lancelot(i,3:4),Data_NPFopt{1}(i,[5,6,4]),Data_NPFopt{2}(i,[5,6,4]),Data_NPFopt{3}(i,[5,6,4]),Data_NPFopt{4}(i,[5,6,4]));
-    else
+    elseif ~isempty(setdiff(i,Idx_large))
         fprintf(fid_output_failed,['%3d&%9s&%4d&%4d&' ...
             '%4d/%4d&' ...
             '%4d/%4d/%4d&', ...
@@ -151,28 +157,23 @@ Nf_MF4 = Data_NPFopt{3}(:,5);
 Ng_MF4 = Data_NPFopt{3}(:,6);
 Nf_MF6 = Data_NPFopt{4}(:,5);
 Ng_MF6 = Data_NPFopt{4}(:,6);
-Idx_large=[];
-for i=1:N
-    if Nf_MF0(i)==0 && Ng_MF0(i)==0
-        Idx_large=union(Idx_large,i);
-    end
-end
 IdxFailed = [];
+n_fail_lan = 0; n_fail_MF0 = 0; n_fail_MF2 = 0; n_fail_MF4 = 0; n_fail_MF6 = 0;
 for i=1:N
-    if Data_Lancelot(i,5)~=0
-        Nf_Lan(i) = Inf; Ng_Lan(i) = Inf; IdxFailed=union(IdxFailed,i);
+    if Data_Lancelot(i,5)~=0 && ~isempty(setdiff(i,Idx_large))
+        Nf_Lan(i) = Inf; Ng_Lan(i) = Inf; IdxFailed=union(IdxFailed,i); n_fail_lan=n_fail_lan+1;
     end
-    if Data_NPFopt{1}(i,3)<=0
-        Nf_MF0(i) = Inf; Ng_MF0(i) = Inf; IdxFailed=union(IdxFailed,i);
+    if Data_NPFopt{1}(i,3)<=0 && ~isempty(setdiff(i,Idx_large))
+        Nf_MF0(i) = Inf; Ng_MF0(i) = Inf; IdxFailed=union(IdxFailed,i);n_fail_MF0=n_fail_MF0+1;
     end
-    if Data_NPFopt{2}(i,3)<=0
-        Nf_MF2(i) = Inf; Ng_MF2(i) = Inf; IdxFailed=union(IdxFailed,i);
+    if Data_NPFopt{2}(i,3)<=0 && ~isempty(setdiff(i,Idx_large))
+        Nf_MF2(i) = Inf; Ng_MF2(i) = Inf; IdxFailed=union(IdxFailed,i);n_fail_MF2=n_fail_MF2+1;
     end
-    if Data_NPFopt{3}(i,3)<=0
-        Nf_MF4(i) = Inf; Ng_MF4(i) = Inf; IdxFailed=union(IdxFailed,i);
+    if Data_NPFopt{3}(i,3)<=0 && ~isempty(setdiff(i,Idx_large))
+        Nf_MF4(i) = Inf; Ng_MF4(i) = Inf; IdxFailed=union(IdxFailed,i);n_fail_MF4=n_fail_MF4+1;
     end
-    if Data_NPFopt{4}(i,3)<=0
-        Nf_MF6(i) = Inf; Ng_MF6(i) = Inf; IdxFailed=union(IdxFailed,i);
+    if Data_NPFopt{4}(i,3)<=0 && ~isempty(setdiff(i,Idx_large))
+        Nf_MF6(i) = Inf; Ng_MF6(i) = Inf; IdxFailed=union(IdxFailed,i);n_fail_MF6=n_fail_MF6+1;
     end
 end
 % Idx=IdxSucceed;
@@ -185,7 +186,8 @@ Nf_min=Nf_min(Idx);
 Ng_min=Ng_min(Idx);
 clear P_Nf_Lan P_Ng_Lan P_Nf_MF0 P_Ng_MF0 P_Nf_MF2 P_Ng_MF2 P_Nf_MF4 P_Ng_MF4 P_Nf_MF6 P_Ng_MF6
 k=1;
-for tau=1:0.5:30
+axis_tau = 1:0.5:25;
+for tau=axis_tau
     P_Nf_Lan(k) = (sum((Nf_Lan(Idx)./Nf_min)<tau)/N_output);
     P_Ng_Lan(k) = (sum((Ng_Lan(Idx)./Ng_min)<tau)/N_output);
     P_Nf_MF0(k) = (sum((Nf_MF0(Idx)./Nf_min)<tau)/N_output);
@@ -202,26 +204,26 @@ end
 fig = figure;
 fig.Position = [655 283 600 300];
 subplot(1,2,1)
-stairs((P_Nf_Lan),'LineWidth',1)
+stairs(axis_tau,P_Nf_Lan,'LineWidth',1)
 hold on
-stairs((P_Nf_MF0),'LineWidth',1)
-stairs((P_Nf_MF2),'LineWidth',1)
-stairs((P_Nf_MF4),'LineWidth',1)
-stairs((P_Nf_MF6),'LineWidth',1)
+stairs(axis_tau,P_Nf_MF0,'LineWidth',1)
+stairs(axis_tau,P_Nf_MF2,'LineWidth',1)
+stairs(axis_tau,P_Nf_MF4,'LineWidth',1)
+stairs(axis_tau,P_Nf_MF6,'LineWidth',1)
 legend('LANCELOT','MF=0','MF=2','MF=4','MF=6','Location','Southeast')
-axis([2,2*tau,0.3,0.9])
+axis([2,tau,0.3,0.9])
 title('nf/best nf')
 
 subplot(1,2,2)
-stairs((P_Ng_Lan),'LineWidth',1)
+stairs(axis_tau,P_Ng_Lan,'LineWidth',1)
 hold on
-stairs((P_Ng_MF0),'LineWidth',1)
-stairs((P_Ng_MF2),'LineWidth',1)
-stairs((P_Ng_MF4),'LineWidth',1)
-stairs((P_Ng_MF6),'LineWidth',1)
+stairs(axis_tau,P_Ng_MF0,'LineWidth',1)
+stairs(axis_tau,P_Ng_MF2,'LineWidth',1)
+stairs(axis_tau,P_Ng_MF4,'LineWidth',1)
+stairs(axis_tau,P_Ng_MF6,'LineWidth',1)
 legend('LANCELOT','MF=0','MF=2','MF=4','MF=6','Location','Southeast')
-title('ng/best ng')
-axis([2,2*tau,0.3,0.9])
+title('ngf/best ngf')
+axis([2,tau,0.3,0.9])
 print(fig,'Fig.eps','-depsc2','-r600')
 
 %% GetFolderNames
