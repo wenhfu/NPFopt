@@ -19,7 +19,7 @@ This repository contains MATLAB scripts used to generate numerical results for c
 
 1. **Run the Main Script**: Execute the `Compare_NPFopt.m` script to generate the comparison results. The script will automatically load the test problems, run the NPFopt and Lancelot algorithms, and produce the comparison data and plots.
 
-2. **Check Output Files**: After running the script, the generated comparison results will be saved in `output_detailed.txt`, `output_all.txt`, `output_successful.txt`, and `output_failed.txt`.
+2. **Check Output Files**: After running the script, the generated comparison results will be saved in `output_detailed.txt`, `output_all.txt`, `output_successful_MF*.txt`, and `output_failed_MF*.txt`.
 
 3. **View the Plot**: The generated performance comparison plot will be saved as `Fig.eps`.
 
