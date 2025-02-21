@@ -26,7 +26,7 @@ The script assumes the following directory structure:
    - The script iterates over each problem in the `Eq`, `IneqGe`, and `IneqLe` directories.
    - For each problem, it creates a directory, runs the LANCELOT solver, and reads the output from the `SUMMARY.d` file.
 3. **Data Collection**:
-   - The script extracts key metrics such as the number of iterations (`n`), function evaluations (`Nf`), gradient evaluations (`Ng`), and solver flags (`Flag`).
+   - The script extracts key metrics such as the number of iterations (`n`), function evaluations (`nf`), gradient evaluations (`ng`), and solver flags (`Flag`).
    - It also captures the objective type, value, and name.
 4. **Data Saving**: The collected data is saved in MATLAB `.mat` files (`Lancelot_data_Eq.mat`, `Lancelot_data_IneqGe.mat`, `Lancelot_data_IneqLe.mat`).
 
@@ -45,7 +45,7 @@ Each `.mat` file contains two variables:
 
 ## Usage
 
-1. **Set Up Directories**: Ensure that the directories (`All_Problems`, `CUTE/lancelot/bin/sdlan`) are correctly set up and contain the necessary files.
+1. **Set Up Directories**: Ensure that the directories (`All_Problems`, `lancelot/bin/sdlan`) are correctly set up and contain the necessary files.
 2. **Run the Script**: Execute the script in MATLAB. The script will automatically run the LANCELOT solver on all problems and save the results in the appropriate `.mat` files.
 3. **Analyze Results**: Use the generated `.mat` files for further analysis as needed.
 

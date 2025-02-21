@@ -1,7 +1,7 @@
 clear;clc
 warning('off')
 pwd_original = pwd;
-pwd_SIF = '/home/mpc-linux-01/Softwares/CUTE/sif';
+% pwd_SIF = '/home/mpc-linux-01/Softwares/CUTE/sif';
 pwd_sdlan = '/home/mpc-linux-01/Softwares/CUTE/lancelot/bin/sdlan ';
 cd(pwd_original)
 opts = delimitedTextImportOptions("NumVariables", 15);

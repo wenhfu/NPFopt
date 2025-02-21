@@ -115,9 +115,9 @@ end
 %% Write to txt
 fid_output_detailed=fopen(fullfile(pwd_compare,'/output_detailed.txt'),'w');
 fid_output_all=fopen(fullfile(pwd_compare,'/output_all.txt'),'w');
-fid_output_successful_MF0=fopen(fullfile(pwd_compare,'/fid_output_successful_MF0.txt'),'w');
+fid_output_successful_MF0=fopen(fullfile(pwd_compare,'/output_successful_MF0.txt'),'w');
 fid_output_failed_MF0=fopen(fullfile(pwd_compare,'/output_failed_MF0.txt'),'w');
-fid_output_successful_MF6=fopen(fullfile(pwd_compare,'/fid_output_successful_MF6.txt'),'w');
+fid_output_successful_MF6=fopen(fullfile(pwd_compare,'/output_successful_MF6.txt'),'w');
 fid_output_failed_MF6=fopen(fullfile(pwd_compare,'/output_failed_MF6.txt'),'w');
 fprintf(fid_output_detailed,'No.     name     n    m   |  lan: f       nf   ng  flag | MF0: f         nf  ng  iter flag |  MF2: f       nf   ng  iter flag |  MF4: f       nf   ng iter  flag |  MF6: f       nf   ng iter  flag\n');
 for i=1:N
