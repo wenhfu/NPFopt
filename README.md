@@ -1,6 +1,6 @@
 ## Introduction
 
-`NPFopt.m` is a MATLAB-based nonlinear programming solver that utulizes the **P**enalty-**F**ree method with a **N**onmonotone line search, designed to solve **OPT**imization problems with equality or inequality constraints. Its key features include:
+`NPFopt.m` is a MATLAB-based **OPT**imization solver that utulizes the **P**enalty-**F**ree method with a **N**onmonotone line search strategy, designed to solve problems with equality or inequality constraints. Its key features include:
 
 - **Nonmonotone Line Search**: Relaxes the requirement for monotonic decrease in the objective function or constraint violation measurement, improving global convergence and Maratos effect avoidance. 
 - **Penalty-Free Method**: Avoids numerical instability issues introduced by traditional penalty functions.
