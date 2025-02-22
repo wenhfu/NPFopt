@@ -26,7 +26,7 @@
 %
 % opts.epsilon: Termination tolerance; the default is 1e-5.
 % opts.nfmax: Maximum number of function evaluation allowed, a positive integer; the default is 1000.
-% opts.itermax: Maximum number of iterations allowed, a positive integer; the default is 300
+% opts.itermax: Maximum number of iterations allowed, a positive integer; the default is 1000
 % opts.display: Level of display. 0: displays no output (defult); 1: displays output at each iteration
 %
 % Output:
@@ -56,16 +56,16 @@ end
 if exist('opts','var')
     if isfield(opts,'epsilon'); epsilon = opts.epsilon; else; epsilon=1e-5; end
     if isfield(opts,'nfmax'); nfmax = opts.nfmax; else; nfmax=1000; end
-    if isfield(opts,'itermax'); itermax = opts.itermax; else; itermax=300; end
+    if isfield(opts,'itermax'); itermax = opts.itermax; else; itermax=1000; end
     if isfield(opts,'display'); alg_display = opts.display; else; alg_display=1; end
 else
-    epsilon=1e-5; itermax=300; nfmax=1000; alg_display=0;
+    epsilon=1e-5; itermax=1000; nfmax=1000; alg_display=1;
 end
 n = length(x0); 
 % The parameters for the algorithm
 Delta=1e3;beta=1e-3;
 delta=1;sv=2.1;etaf=1e-3;etac=1e-3;etav=1e-3;niu=2.1;gamma=0.6;
-beta1=0.1;beta2=0.75;iter=0;H=eye(n,n);FL=0; alpha=1; % beta1=0.9;
+beta1=0.1;beta2=0.75;iter=0;H=eye(n,n);FL=0;
 % Begining
 xold=x0;
 [fxold,gfxold]=funf(xold);nf=1;ngf=1; % f(x), gradf(x)
@@ -384,8 +384,8 @@ output.ngf = ngf;
 output.ngc = ngc;
 output.n=n;
 output.m=meq;
-Lam=pinv(gcxnew)*gfxnew;
-Res=norm(gfxnew-gcxnew*Lam);
+Lam=pinv(gcxold)*gfxold;
+Res=norm(gfxold-gcxold*Lam);
 output.Res=Res;
 lambda = Lam;
 end

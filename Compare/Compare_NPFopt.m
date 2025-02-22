@@ -135,7 +135,7 @@ for i=1:N
         '%4d/%4d/%4d&', ...
         '%4d/%4d/%4d \\\\ \n'], ...
         i,Data_Lancelot_flag{i,3},Data_Lancelot(i,1:2),Data_Lancelot(i,3:4),Data_NPFopt{1}(i,[5,6,4]),Data_NPFopt{2}(i,[5,6,4]),Data_NPFopt{3}(i,[5,6,4]),Data_NPFopt{4}(i,[5,6,4]));
-    if Data_NPFopt{1}(i,3)>0
+    if Data_NPFopt{1}(i,3)>0 % successful or failed for MF=0
         fprintf(fid_output_successful_MF0,['%3d&%9s&%4d&%4d&' ...
             '%4d/%4d&' ...
             '%4d/%4d/%4d&', ...
@@ -152,7 +152,7 @@ for i=1:N
             '%4d/%4d/%4d \\\\ \n'], ...
             i,Data_Lancelot_flag{i,3},Data_Lancelot(i,1:2),Data_Lancelot(i,3:4),Data_NPFopt{1}(i,[5,6,4]),Data_NPFopt{2}(i,[5,6,4]),Data_NPFopt{3}(i,[5,6,4]),Data_NPFopt{4}(i,[5,6,4]));
     end
-    if Data_NPFopt{4}(i,3)>0
+    if Data_NPFopt{4}(i,3)>0 % successful or failed for MF=6
         fprintf(fid_output_successful_MF6,['%3d&%9s&%4d&%4d&' ...
             '%4d/%4d&' ...
             '%4d/%4d/%4d&', ...
@@ -178,27 +178,25 @@ fclose(fid_output_successful_MF6);
 fclose(fid_output_failed_MF6);
 
 %% Plot
-IdxFailed = [];
+IdxFailed_Lan = []; IdxFailed_MF0 = []; IdxFailed_MF2 = []; IdxFailed_MF4 = []; IdxFailed_MF6 = [];
 n_fail_lan = 0; n_fail_MF0 = 0; n_fail_MF2 = 0; n_fail_MF4 = 0; n_fail_MF6 = 0;
 for i=1:N
     if Data_Lancelot(i,5)~=0 && ~isempty(setdiff(i,Idx_large))
-        Nf_Lan(i) = Inf; Ng_Lan(i) = Inf; IdxFailed=union(IdxFailed,i); n_fail_lan=n_fail_lan+1;
+        Nf_Lan(i) = Inf; Ng_Lan(i) = Inf; IdxFailed_Lan=union(IdxFailed_Lan,i); n_fail_lan=n_fail_lan+1;
     end
     if Data_NPFopt{1}(i,3)<=0 && ~isempty(setdiff(i,Idx_large))
-        Nf_MF0(i) = Inf; Ng_MF0(i) = Inf; IdxFailed=union(IdxFailed,i);n_fail_MF0=n_fail_MF0+1;
+        Nf_MF0(i) = Inf; Ng_MF0(i) = Inf; IdxFailed_MF0=union(IdxFailed_MF0,i);n_fail_MF0=n_fail_MF0+1;
     end
     if Data_NPFopt{2}(i,3)<=0 && ~isempty(setdiff(i,Idx_large))
-        Nf_MF2(i) = Inf; Ng_MF2(i) = Inf; IdxFailed=union(IdxFailed,i);n_fail_MF2=n_fail_MF2+1;
+        Nf_MF2(i) = Inf; Ng_MF2(i) = Inf; IdxFailed_MF2=union(IdxFailed_MF2,i);n_fail_MF2=n_fail_MF2+1;
     end
     if Data_NPFopt{3}(i,3)<=0 && ~isempty(setdiff(i,Idx_large))
-        Nf_MF4(i) = Inf; Ng_MF4(i) = Inf; IdxFailed=union(IdxFailed,i);n_fail_MF4=n_fail_MF4+1;
+        Nf_MF4(i) = Inf; Ng_MF4(i) = Inf; IdxFailed_MF4=union(IdxFailed_MF4,i);n_fail_MF4=n_fail_MF4+1;
     end
     if Data_NPFopt{4}(i,3)<=0 && ~isempty(setdiff(i,Idx_large))
-        Nf_MF6(i) = Inf; Ng_MF6(i) = Inf; IdxFailed=union(IdxFailed,i);n_fail_MF6=n_fail_MF6+1;
+        Nf_MF6(i) = Inf; Ng_MF6(i) = Inf; IdxFailed_MF6=union(IdxFailed_MF6,i);n_fail_MF6=n_fail_MF6+1;
     end
 end
-% Idx=IdxSucceed;
-% IdxSucceed=setdiff(1:length(Nf_Lan),IdxFailed);
 Nf_min = min([Nf_Lan,Nf_MF0,Nf_MF2,Nf_MF4,Nf_MF6]')';
 Ng_min = min([Ng_Lan,Ng_MF0,Ng_MF2,Ng_MF4,Ng_MF6]')';
 Idx = setdiff(1:N,Idx_large);

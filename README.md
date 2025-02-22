@@ -31,7 +31,7 @@ Simply place the `NPFopt.m` file in your MATLAB working directory and call it as
 | `con_type` | Integer         | Constraint type of the problem:<br /> `0`: Equality constraint `c(x) = 0` <br />`1`: Inequality constraint `c(x) ≥ 0` <br />`-1`: Inequality constraint `c(x) ≤ 0` |
 | `x0`       | Vector          | Initial point                                                |
 | `MF`       | Integer         | Maximum allowed consecutive unsuccessful iterations (default `0`) |
-| `opts`     | Struct          | Optional parameters:<br /> `epsilon`: Convergence tolerance (default `1e-5`)<br /> `nfmax`: Maximum function evaluations (default `1000`) <br /> `itermax`: Maximum iterations (default `300`) <br /> `display`: Level of display (`0` or `1`, default `1`) |
+| `opts`     | Struct          | Optional parameters:<br /> `epsilon`: Convergence tolerance (default `1e-5`)<br /> `nfmax`: Maximum function evaluations (default `1000`) <br /> `itermax`: Maximum iterations (default `1000`) <br /> `display`: Level of display (`0` or `1`, default `1`) |
 
 ------
 

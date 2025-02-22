@@ -5,6 +5,7 @@
 
 clear; clc;
 opts.nfmax=5000;
+opts.itermax=300;
 opts.display=0;
 con_type = 0;
 MF_all = [0,1,2,3,4,5,6];
