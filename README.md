@@ -86,7 +86,7 @@ Minimize $f(x)=x_1^2+x_2^2$   , subject to $c(x)=1-x_1-x_2=0$.
 funf = @(x) deal(x(1)^2 + x(2)^2, [2*x(1); 2*x(2)]);
 
 % Define the constraint function and its gradient
-func = @(x) deal(1 - x(1) - x(2), [-1, -1]);
+func = @(x) deal( x(1) - 2, 1 - x(1) - x(2), [1, 0], [-1, -1]);
 
 % Call the solver
 x0 = [0; 0];
