@@ -89,9 +89,8 @@ funf = @(x) deal(x(1)^2 + x(2)^2, [2*x(1); 2*x(2)]);
 func = @(x) deal(1 - x(1) - x(2), [-1, -1]);
 
 % Call the solver
-con_type = 0; % Equality constraint
 x0 = [0; 0];
-[x, fval, exitflag, output] = NPFopt(funf, func, con_type, x0);
+[x, fval, exitflag, output] = NPFopt(funf, func, x0);
 
 % Display results
 disp('Solution:'); disp(x);
