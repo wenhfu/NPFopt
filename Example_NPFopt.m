@@ -1,6 +1,6 @@
 % A penalty-free method with nonmonotone line search for nonlinear optimization
 % This is a test example for optimization problem
-%       min       f(x) = - x1 + rho * ( x1^2 + x2^2-1 )
+%   minimize   f(x) = - x1 + rho * ( x1^2 + x2^2-1 )
 %  subject to  c(x) = x1^2 + x2^2 - 1 = 0 
 
 clear; clc;
@@ -20,7 +20,7 @@ for MF = MF_all
         funf = @(x) deal(-x(1)+rho*(x(1)^2+x(2)^2-1), [-1+2*rho*x(1); 2*rho*x(2)]);
         func = @(x) deal([],x(1)^2+x(2)^2-1,[],[2*x(1), 2*x(2)]);
         x0 = [0.8;0.6];
-        [x,fval,exitflag,output,lambda] = NPFopt_new(funf,func,x0,MF,opts);
+        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF,opts);
         fprintf(fid,'nit = %4d,  nf = %4d,  ngf = %4d,  ||c(x)|| = %.4e,   Res = %.4e\n',output.iter,output.nf,output.ngf,output.con,output.Res);
     end
 end
@@ -37,12 +37,12 @@ for MF = MF_all
         func = @(x) deal([],x(1)^2+x(2)^2-1,[],[2*x(1), 2*x(2)]);
         t = 1e-4;
         x0 = [cos(t);sin(t)];
-        [x,fval,exitflag,output,lambda] = NPFopt_new(funf,func,x0,MF,opts);
+        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF,opts);
         fprintf(fid,'nit = %4d,  nf = %4d,  ngf = %4d,  ||c(x)|| = %.4e,   Res = %.4e\n',output.iter,output.nf,output.ngf,output.con,output.Res);
     end
 end
 
 fclose(fid);
 %%
-fileread('Example_out_new.txt')
+fileread('Example_out.txt')
 

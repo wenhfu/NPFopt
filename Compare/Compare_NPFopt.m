@@ -8,7 +8,6 @@ cd('..')
 addpath(pwd);
 cd(pwd_compare)
 MF_all = [0,2,4,6];
-% MF_all = 2;
 
 %%
 for MF_idx=1:length(MF_all)
@@ -21,15 +20,13 @@ for MF_idx=1:length(MF_all)
     N = length(SubFolderNames);
     TP_index = 1:N;
     Data_NPFoptEq = zeros(N,6);
-    % for Loop_i = setdiff(TP_index,[51 52 53 54])
     for Loop_i = TP_index
-    % for Loop_i = [11    24    37    47      54    65    86    98   105   106   108   109   122  ]  % 51 52 53
         fprintf('\nComparision for c(x)=0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
         try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
         x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
-        [x,fval,exitflag,output,lambda] = NPFopt_new(funf,func,x0,MF);
+        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF);
         cutest_terminate();
         Data_NPFoptEq(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
     end
@@ -42,14 +39,12 @@ for MF_idx=1:length(MF_all)
     TP_index = 1:N;
     Data_NPFoptIneqGe = zeros(N,6);
     for Loop_i=TP_index
-    % for Loop_i = setdiff(TP_index,[169]-123)
-    % for Loop_i= [ 138   146   147   148   149   150     173   174  ] - 123  % 169
         fprintf('\nComparision for c(x)>0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
         try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
         x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
-        [x,fval,exitflag,output,lambda] = NPFopt_new(funf,func,x0,MF);
+        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF);
         Data_NPFoptIneqGe(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
     end
     %% Comparision for c(x)<0
@@ -61,20 +56,19 @@ for MF_idx=1:length(MF_all)
     TP_index = 1:N;
     Data_NPFoptIneqLe = zeros(N,6);
     for Loop_i=TP_index
-    % for Loop_i = [ 180   194   196 ] - 175
         fprintf('\nComparision for c(x)<0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
         try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
         x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
-        [x,fval,exitflag,output,lambda] = NPFopt_new(funf,func,x0,MF);
+        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF);
         Data_NPFoptIneqLe(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
     end
     Data_NPFopt{MF_idx} = [Data_NPFoptEq;Data_NPFoptIneqGe;Data_NPFoptIneqLe];
 end
 cd(pwd_compare);
 
-% save Data_NPFopt Data_NPFopt
+save Data_NPFopt Data_NPFopt
  
 %% Comparision with Lancelot
 load Data_NPFopt

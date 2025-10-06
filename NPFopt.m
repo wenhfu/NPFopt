@@ -47,7 +47,7 @@
 %
 % lambda: Lagrange multipliers.
 
-function [x,fval,exitflag,output,lambda] = NPFopt_new(funf,func,x0,MF,opts)
+function [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF,opts)
 % [f,gf] = funf(x)
 % [c_ineq,c_eq,Jc_ineq,Jc_eq] = func(x)
 if ~exist('MF','var')
