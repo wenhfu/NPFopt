@@ -18,15 +18,17 @@ for MF_idx=1:length(MF_all)
     cd(pwd_Problem)
     SubFolderNames = GetFolders(pwd)';
     N = length(SubFolderNames);
-    TP_index = 1:N;         
+    TP_index = 1:N;
     Data_NPFoptEq = zeros(N,6);
-    for Loop_i=TP_index
+    for Loop_i = TP_index
         fprintf('\nComparision for c(x)=0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
-        prob=cutest_setup();
-        funf=@(x) cutest_obj(x); func=@(x) cutest_cons(x); x0=prob.x;
-        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,con_type,x0,MF);
+        try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
+        % x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) cutest_cons(x); 
+        % [x,fval,exitflag,output,lambda] = NPFopt_main(funf,func,con_type,x0,MF);
+        x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
+        [x,fval,exitflag,output,lambda] = NPFopt_main(funf,func,con_type,x0,MF);
         cutest_terminate();
         Data_NPFoptEq(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
     end
@@ -43,10 +45,10 @@ for MF_idx=1:length(MF_all)
         fprintf('\nComparision for c(x)>0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
-        prob=cutest_setup();
-        funf=@(x) cutest_obj(x); func=@(x) cutest_cons(x); x0=prob.x;
-        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,con_type,x0,MF);
-        cutest_terminate();
+        try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
+        % funf=@(x) cutest_obj(x); func=@(x) cutest_cons(x); x0=prob.x;
+        x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
+        [x,fval,exitflag,output,lambda] = NPFopt_main(funf,func,con_type,x0,MF);
         Data_NPFoptIneqGe(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
     end
     %% Comparision for c(x)<0
@@ -62,10 +64,10 @@ for MF_idx=1:length(MF_all)
         fprintf('\nComparision for c(x)<0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
-        prob=cutest_setup();
-        funf=@(x) cutest_obj(x); func=@(x) cutest_cons(x); x0=prob.x;
-        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,con_type,x0,MF);
-        cutest_terminate();
+        try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
+        % funf=@(x) cutest_obj(x); func=@(x) cutest_cons(x); x0=prob.x;
+        x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
+        [x,fval,exitflag,output,lambda] = NPFopt_main(funf,func,con_type,x0,MF);
         Data_NPFoptIneqLe(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
     end
     Data_NPFopt{MF_idx} = [Data_NPFoptEq;Data_NPFoptIneqGe;Data_NPFoptIneqLe];
@@ -259,4 +261,62 @@ end
 temp = {SubFolder.SubFolderName};
 idx = cellfun(@(x)~isempty(x),temp,'UniformOutput',true);
 SubFolders = temp(idx);
+end
+
+%%  Constraint functions
+function [cineq,ceq,gcineq,gceq] = nonlcon(x,prob)
+% clear;clc
+% try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
+% x = prob.x;
+n = prob.n;
+m = prob.m;
+[c,gc] = cutest_cons(x); 
+cl = prob.cl; cu = prob.cu; bl = prob.bl; bu = prob.bu;
+meq = 0; mineq = 0; ceq = zeros(0,0); gceq = zeros(0,n); cineq = zeros(0,0); gcineq = zeros(0,n);
+for i=1:m
+    if cl(i) == cu(i)
+        meq = meq + 1;
+        ceq(meq,1) = c(i) - cu(i); gceq(meq,:) = gc(i,:); % i \in E
+        continue
+    end
+    if cl(i) == -1e+20
+        mineq = mineq + 1;
+        cineq(mineq,1) = c(i) - cu(i); gcineq(mineq,:) = gc(i,:); % i \in I
+        continue
+    end
+    if cu(i) == 1e+20
+        mineq = mineq + 1;
+        cineq(mineq,1) = - c(i) + cl(i); gcineq(mineq,:) = - gc(i,:); % i \in I
+        continue
+    end
+    mineq = mineq + 1;
+    cineq(mineq,1) = - c(i) + cl(i); gcineq(mineq,:) = - gc(i,:); 
+    mineq = mineq + 1;
+    cineq(mineq,1) = c(i) - cu(i); gcineq(mineq,:) = gc(i,:);
+end
+for i=1:n
+    if bu(i) == 1e+20 && bl(i) ==  - 1e+20
+        continue
+    end
+    if bl(i) == bu(i)
+        meq = meq + 1;
+        ceq(meq,1) = x(i) - bu(i); gceq(meq,i) = 1; % i \in E
+        continue
+    end
+    if bl(i) == -1e+20 && bu(i) < 1e+20
+        mineq = mineq + 1;
+        cineq(mineq,1) = x(i) - bu(i); gcineq(mineq,i) = 1; % i \in I
+        continue
+    end
+    if bu(i) == 1e+20 && bl(i) > - 1e+20
+        mineq = mineq + 1;
+        cineq(mineq,1) = - x(i) + bl(i); gcineq(mineq,i) = - 1; % i \in I
+        continue
+    end
+    mineq = mineq + 1;
+    cineq(mineq,1) = - x(i) + bl(i); gcineq(mineq,i) = -1; 
+    mineq = mineq + 1;
+    cineq(mineq,1) = x(i) - bu(i); gcineq(mineq,i) = 1;
+end
+cineq = - cineq; gcineq = - gcineq;
 end

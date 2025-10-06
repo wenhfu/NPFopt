@@ -1,0 +1,4 @@
+Results for Tab 1:
+
+MF  =    0:
+rho =   10:   
