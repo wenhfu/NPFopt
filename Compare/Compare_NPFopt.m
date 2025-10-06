@@ -231,7 +231,7 @@ title('ngf/best ngf')
 axis([1,tau,0.2,0.9])
 print(fig,'Fig.eps','-depsc2','-r600')
 
-N_succ = N - [n_fail_lan;n_fail_MF0;n_fail_MF2;n_fail_MF4;n_fail_MF6];
+% N_succ = N - [n_fail_lan;n_fail_MF0;n_fail_MF2;n_fail_MF4;n_fail_MF6];
 fprintf('Number of problems solved for Lancelot: %3d\n',N-n_fail_lan);
 fprintf('Number of problems solved when MF=0: %3d\n',N-n_fail_MF0);
 fprintf('Number of problems solved when MF=2: %3d\n',N-n_fail_MF2);
