@@ -4,8 +4,9 @@
 % Coded by Wenhao Fu, Feb. 10, 2025.
 %
 % Problem setting:
-%       min       f(x)
-%  subject to  c(x)=0, c(x)>0, or c(x)<0
+%   minimize        f(x)
+%  subject to  c_ineq(x) <= 0,
+%                c_eq(x)  = 0.
 %
 % Input:
 % [...] = NPFopt(funf,func,con_type,x0)
@@ -16,9 +17,6 @@
 %
 % func: A matlab function that calculates the value of c(x) and gradient value of c(x).
 %
-% con_type =  0: problem with c(x)=0.
-% con_type =  1: problem with c(x)>0.
-% con_type = -1: problem with c(x)<0.
 %
 % x0: Initial point, specified as a real vector or real array.
 %
@@ -50,13 +48,6 @@
 % lambda: Lagrange multipliers.
 
 function [x,fval,exitflag,output,lambda] = NPFopt_new(funf,func,x0,MF,opts)
-% clear;clc;
-% x0 = [0.8;0.6]; rho = 1; MF = 6;
-% funf = @(x) deal(-x(1)+rho*(x(1)^2+x(2)^2-1), [-1+2*rho*x(1); 2*rho*x(2)]);
-% func = @(x) deal(1000-x(1)-x(2),x(1)^2+x(2)^2-1,-[1, 1],[2*x(1), 2*x(2)]);
-% func = @(x) deal(-x(1)^2-x(2)^2+10,x(1)^2+x(2)^2-1,-[2*x(1), 2*x(2)],[2*x(1), 2*x(2)]);
-% func = @(x) deal([],x(1)^2+x(2)^2-1,[],[2*x(1), 2*x(2)]);
-% func = @(x) deal(-x(1)^2-x(2)^2+1,[],-[2*x(1), 2*x(2)],[]);
 % [f,gf] = funf(x)
 % [c_ineq,c_eq,Jc_ineq,Jc_eq] = func(x)
 if ~exist('MF','var')
