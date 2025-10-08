@@ -1,5 +1,5 @@
-% A penalty-free method with nonmonotone line search for nonlinear optimization, Feb. 10, 2025.
-% min. f(x) subject to c(x)=0, c(x)<0 or c(x)>0.
+% A penalty-free method with nonmonotone line search for nonlinear optimization, Oct. 06, 2025.
+% min. f(x) subject to c(x)=0, c(x)>=0.
 % Comparision on CUTEst problems for Algorithm 2.1 by T. Xu et al. as well as Lancelot B.
 % Coded by Wenhao Fu.
 clear; clc

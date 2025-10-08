@@ -102,8 +102,8 @@ while ((iter <= itermax) && (nf <= nfmax)) && (flag_Alg == 0)
     v2 = [ Delta*ones(n,1); Inf*ones(2*m_eq + m_ineq,1) ];
     [ dlin, flin, exitflag ] = linprog(subc,A,b,Aeq,beq,v1,v2,options_lp);
     if exitflag <= 0
-        options_lp = optimoptions('linprog','Display','none','Algorithm','interior-point-legacy');
-        [ dlin, flin, exitflag, output_lp ] = linprog(subc,A,b,Aeq,beq,v1,v2,options_lp);
+        options_lp_tmp = optimoptions('linprog','Display','none','Algorithm','interior-point-legacy');
+        [ dlin, flin, exitflag, output_lp ] = linprog(subc,A,b,Aeq,beq,v1,v2,options_lp_tmp);
         % if exitflag <= 0
         %     options_lp = optimoptions('linprog','Display','none');
         %     [ dlin, flin, exitflag, output_lp ] = linprog(subc,A,b,Aeq,beq,v1,v2,options_lp);
@@ -280,10 +280,10 @@ while ((iter <= itermax) && (nf <= nfmax)) && (flag_Alg == 0)
                     alpha = gamma*alpha;
                 end
             end
-            if abs(fxold-fxnew)/max(abs(fxnew),1) < 0.1*epsilon && vxnew < 0.01*epsilon
-                fprintf('successfully end              ');
-                flag_Alg = 3; break
-            end
+            % if abs(fxold-fxnew)/max(abs(fxnew),1) < 0.1*epsilon && vxnew < 0.01*epsilon
+            %     fprintf('successfully end              ');
+            %     flag_Alg = 3; break
+            % end
         end % for while (alpha)
         if alpha <= 1e-8
             if alg_display == 1
