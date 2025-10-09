@@ -18,17 +18,16 @@ for MF_idx=1:length(MF_all)
     cd(pwd_Problem)
     SubFolderNames = GetFolders(pwd)';
     N = length(SubFolderNames);
-    TP_index = 1:N;
+    TP_index = 1 : N;
     Data_NPFoptEq = zeros(N,6);
     for Loop_i = TP_index
         fprintf('\nComparision for c(x)=0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
-        try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
-        x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
-        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF);
-        cutest_terminate();
-        Data_NPFoptEq(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
+        try prob = cutest_setup(); catch; cutest_terminate(); prob = cutest_setup(); end
+        x0 = prob.x; funf = @(x) cutest_obj(x); func = @(x) nonlcon(x,prob); 
+        [ x, fval, exitflag, output, lambda ] = NPFopt(funf,func,x0,MF);
+        Data_NPFoptEq(Loop_i,1:6) = [ fval, output.con, exitflag, output.iter, output.nf, output.ngf ];
     end
     %% Comparision for c(x)>0
     Test_Problem = 'IneqGe';
@@ -36,16 +35,16 @@ for MF_idx=1:length(MF_all)
     cd(pwd_Problem)
     SubFolderNames = GetFolders(pwd)';
     N = length(SubFolderNames);
-    TP_index = 1:N;
+    TP_index = 1 : N;
     Data_NPFoptIneqGe = zeros(N,6);
     for Loop_i=TP_index
         fprintf('\nComparision for c(x)>0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
-        try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
-        x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
-        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF);
-        Data_NPFoptIneqGe(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
+        try prob = cutest_setup(); catch; cutest_terminate(); prob = cutest_setup(); end
+        x0 = prob.x; funf = @(x) cutest_obj(x); func = @(x) nonlcon(x,prob); 
+        [ x, fval, exitflag, output, lambda ] = NPFopt(funf,func,x0,MF);
+        Data_NPFoptIneqGe(Loop_i,1:6) = [ fval, output.con, exitflag, output.iter, output.nf, output.ngf ];
     end
     %% Comparision for c(x)<0
     Test_Problem = 'IneqLe';
@@ -53,18 +52,18 @@ for MF_idx=1:length(MF_all)
     cd(pwd_Problem)
     SubFolderNames = GetFolders(pwd)';
     N = length(SubFolderNames);
-    TP_index = 1:N;
+    TP_index = 1 : N;
     Data_NPFoptIneqLe = zeros(N,6);
     for Loop_i=TP_index
         fprintf('\nComparision for c(x)<0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
-        try prob=cutest_setup();catch;cutest_terminate();prob=cutest_setup();end
-        x0=prob.x; funf=@(x) cutest_obj(x); func=@(x) nonlcon(x,prob); 
-        [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF);
-        Data_NPFoptIneqLe(Loop_i,1:6) = [fval,output.con,exitflag,output.iter,output.nf,output.ngf];
+        try prob = cutest_setup(); catch; cutest_terminate(); prob = cutest_setup(); end
+        x0 = prob.x; funf = @(x) cutest_obj(x); func = @(x) nonlcon(x,prob); 
+        [ x, fval, exitflag, output, lambda ] = NPFopt(funf,func,x0,MF);
+        Data_NPFoptIneqLe(Loop_i,1:6) = [ fval, output.con, exitflag, output.iter, output.nf, output.ngf ];
     end
-    Data_NPFopt{MF_idx} = [Data_NPFoptEq;Data_NPFoptIneqGe;Data_NPFoptIneqLe];
+    Data_NPFopt{MF_idx} = [ Data_NPFoptEq; Data_NPFoptIneqGe; Data_NPFoptIneqLe ];
 end
 cd(pwd_compare);
 
@@ -78,8 +77,8 @@ load('All_Problems_Lan/Lancelot_data_IneqGe.mat')
 NitIneqGe = Nit; NitIneqGe_flag = Nit_flag;
 load('All_Problems_Lan/Lancelot_data_IneqLe.mat')
 NitIneqLe = Nit; NitIneqLe_flag = Nit_flag;
-Data_Lancelot = [NitEq;NitIneqGe;NitIneqLe];
-Data_Lancelot_flag = [NitEq_flag;NitIneqGe_flag;NitIneqLe_flag];
+Data_Lancelot = [ NitEq; NitIneqGe; NitIneqLe ];
+Data_Lancelot_flag = [ NitEq_flag; NitIneqGe_flag; NitIneqLe_flag ];
 N = size(Data_NPFopt{1},1);
 Nf_Lan = Data_Lancelot(:,3);
 Ng_Lan = Data_Lancelot(:,4);
@@ -103,8 +102,8 @@ for i=1:N
         i,Data_Lancelot_flag{i,3},Data_Lancelot(i,1:2),str2num(Data_Lancelot_flag{i,2}),Data_Lancelot(i,3:5),Data_NPFopt{1}(i,[1,5,6,3]),Data_NPFopt{2}(i,[1,5,6,3]),Data_NPFopt{3}(i,[1,5,6,3]),Data_NPFopt{4}(i,[1,5,6,3]));
 end
 %% Write to txt
-fid_output_detailed=fopen(fullfile(pwd_compare,'/output_detailed.txt'),'w');
-fid_output_all=fopen(fullfile(pwd_compare,'/output_all.txt'),'w');
+fid_output_detailed = fopen(fullfile(pwd_compare,'/output_detailed.txt'),'w');
+fid_output_all = fopen(fullfile(pwd_compare,'/output_all.txt'),'w');
 fprintf(fid_output_detailed,'No.     name     n    m   |  lan: f       nf   ng  flag | MF0: f         nf  ng  iter flag |  MF2: f       nf   ng  iter flag |  MF4: f       nf   ng iter  flag |  MF6: f       nf   ng iter  flag\n');
 for i=1:N
     fprintf(fid_output_detailed,['%3d %9s %4d %4d:  ' ...
@@ -138,40 +137,40 @@ fclose(fid_output_all);
 %% Plot
 IdxFailed_Lan = []; IdxFailed_MF0 = []; IdxFailed_MF2 = []; IdxFailed_MF4 = []; IdxFailed_MF6 = [];
 n_fail_lan = 0; n_fail_MF0 = 0; n_fail_MF2 = 0; n_fail_MF4 = 0; n_fail_MF6 = 0;
-for i=1:N
-    if Data_Lancelot(i,5)~=0
+for i = 1 : N
+    if Data_Lancelot(i,5) ~= 0
         Nf_Lan(i) = Inf; Ng_Lan(i) = Inf; IdxFailed_Lan=union(IdxFailed_Lan,i); n_fail_lan=n_fail_lan+1;
     end
-    if Data_NPFopt{1}(i,3)<=0
+    if Data_NPFopt{1}(i,3) <= 0
         Nf_MF0(i) = Inf; Ng_MF0(i) = Inf; IdxFailed_MF0=union(IdxFailed_MF0,i);n_fail_MF0=n_fail_MF0+1;
     end
-    if Data_NPFopt{2}(i,3)<=0
+    if Data_NPFopt{2}(i,3) <= 0
         Nf_MF2(i) = Inf; Ng_MF2(i) = Inf; IdxFailed_MF2=union(IdxFailed_MF2,i);n_fail_MF2=n_fail_MF2+1;
     end
-    if Data_NPFopt{3}(i,3)<=0
+    if Data_NPFopt{3}(i,3) <= 0
         Nf_MF4(i) = Inf; Ng_MF4(i) = Inf; IdxFailed_MF4=union(IdxFailed_MF4,i);n_fail_MF4=n_fail_MF4+1;
     end
-    if Data_NPFopt{4}(i,3)<=0
+    if Data_NPFopt{4}(i,3) <= 0
         Nf_MF6(i) = Inf; Ng_MF6(i) = Inf; IdxFailed_MF6=union(IdxFailed_MF6,i);n_fail_MF6=n_fail_MF6+1;
     end
 end
-Nf_min = min([Nf_Lan,Nf_MF0,Nf_MF2,Nf_MF4,Nf_MF6]')';
-Ng_min = min([Ng_Lan,Ng_MF0,Ng_MF2,Ng_MF4,Ng_MF6]')';
+Nf_min = min([ Nf_Lan,Nf_MF0, Nf_MF2, Nf_MF4, Nf_MF6 ]')';
+Ng_min = min([ Ng_Lan, Ng_MF0, Ng_MF2, Ng_MF4, Ng_MF6 ]')';
 clear P_Nf_Lan P_Ng_Lan P_Nf_MF0 P_Ng_MF0 P_Nf_MF2 P_Ng_MF2 P_Nf_MF4 P_Ng_MF4 P_Nf_MF6 P_Ng_MF6
 k=1;
 axis_tau = 1:0.01:25;
 for tau=axis_tau
-    P_Nf_Lan(k) = (sum((Nf_Lan./Nf_min)<=tau)/N);
-    P_Ng_Lan(k) = (sum((Ng_Lan./Ng_min)<=tau)/N);
-    P_Nf_MF0(k) = (sum((Nf_MF0./Nf_min)<=tau)/N);
-    P_Ng_MF0(k) = (sum((Ng_MF0./Ng_min)<=tau)/N);
-    P_Nf_MF2(k) = (sum((Nf_MF2./Nf_min)<=tau)/N);
-    P_Ng_MF2(k) = (sum((Ng_MF2./Ng_min)<=tau)/N);
-    P_Nf_MF4(k) = (sum((Nf_MF4./Nf_min)<=tau)/N);
-    P_Ng_MF4(k) = (sum((Ng_MF4./Ng_min)<=tau)/N);
-    P_Nf_MF6(k) = (sum((Nf_MF6./Nf_min)<=tau)/N);
-    P_Ng_MF6(k) = (sum((Ng_MF6./Ng_min)<=tau)/N);
-    k=k+1;
+    P_Nf_Lan(k) = (sum((Nf_Lan./Nf_min) <= tau) / N);
+    P_Ng_Lan(k) = (sum((Ng_Lan./Ng_min) <= tau) / N);
+    P_Nf_MF0(k) = (sum((Nf_MF0./Nf_min) <= tau) / N);
+    P_Ng_MF0(k) = (sum((Ng_MF0./Ng_min) <= tau) / N);
+    P_Nf_MF2(k) = (sum((Nf_MF2./Nf_min) <= tau) / N);
+    P_Ng_MF2(k) = (sum((Ng_MF2./Ng_min) <= tau) / N);
+    P_Nf_MF4(k) = (sum((Nf_MF4./Nf_min) <= tau) / N);
+    P_Ng_MF4(k) = (sum((Ng_MF4./Ng_min) <= tau) / N);
+    P_Nf_MF6(k) = (sum((Nf_MF6./Nf_min) <= tau) / N);
+    P_Ng_MF6(k) = (sum((Ng_MF6./Ng_min) <= tau) / N);
+    k = k + 1;
 end
 
 fig = figure;
@@ -228,7 +227,7 @@ function [cineq,ceq,gcineq,gceq] = nonlcon(x,prob)
 % x = prob.x;
 n = prob.n;
 m = prob.m;
-[c,gc] = cutest_cons(x); 
+[ c, gc ] = cutest_cons(x); 
 cl = prob.cl; cu = prob.cu; bl = prob.bl; bu = prob.bu;
 meq = 0; mineq = 0; ceq = zeros(0,0); gceq = zeros(0,n); cineq = zeros(0,0); gcineq = zeros(0,n);
 for i=1:m
@@ -272,7 +271,7 @@ for i=1:n
         continue
     end
     mineq = mineq + 1;
-    cineq(mineq,1) = - x(i) + bl(i); gcineq(mineq,i) = -1; 
+    cineq(mineq,1) = - x(i) + bl(i); gcineq(mineq,i) = - 1; 
     mineq = mineq + 1;
     cineq(mineq,1) = x(i) - bu(i); gcineq(mineq,i) = 1;
 end
