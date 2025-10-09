@@ -158,13 +158,13 @@ for i = 1 : N
     if Data_Lancelot(i,5) ~= 0
         fprintf(fid_output_all,'%4d/%4d*',Data_Lancelot(i,1:2));
     else
-        fprintf(fid_output_all,'%4d/%4d',Data_Lancelot(i,1:2));
+        fprintf(fid_output_all,'%4d/%4d ',Data_Lancelot(i,1:2));
     end
     for j = 1 : 4
         if Data_NPFopt{j}(i,3) <= 0
             fprintf(fid_output_all,'&%4d/%4d/%4d*',Data_NPFopt{j}(i,[5,6,4]));
         else
-            fprintf(fid_output_all,'&%4d/%4d/%4d',Data_NPFopt{j}(i,[5,6,4]));
+            fprintf(fid_output_all,'&%4d/%4d/%4d ',Data_NPFopt{j}(i,[5,6,4]));
         end
     end
     fprintf(fid_output_all,' \\\\ \n');
