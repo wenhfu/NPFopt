@@ -154,11 +154,11 @@ for i=1:N
     % end
 end
 for i = 1 : N
-    fprintf(fid_output_all,'%3d&%9s&%4d&%4d&',i,Data_Lancelot_flag{i,3});
+    fprintf(fid_output_all,'%3d&%9s&%4d&%4d',i,Data_Lancelot_flag{i,3});
     if Data_Lancelot(i,5) ~= 0
-        fprintf(fid_output_all,'%4d/%4d*',Data_Lancelot(i,1:2));
+        fprintf(fid_output_all,'&%4d/%4d*',Data_Lancelot(i,1:2));
     else
-        fprintf(fid_output_all,'%4d/%4d ',Data_Lancelot(i,1:2));
+        fprintf(fid_output_all,'&%4d/%4d ',Data_Lancelot(i,1:2));
     end
     for j = 1 : 4
         if Data_NPFopt{j}(i,3) <= 0
@@ -169,17 +169,6 @@ for i = 1 : N
     end
     fprintf(fid_output_all,' \\\\ \n');
 end
-
-    % fprintf(fid_output_all,'%4d/%4d/%4d&',Data_NPFopt{2}(i,[5,6,4]));
-    % fprintf(fid_output_all,'%4d/%4d/%4d&',Data_NPFopt{3}(i,[5,6,4]));
-    % fprintf(fid_output_all,'%4d/%4d/%4d&',Data_NPFopt{4}(i,[5,6,4]));
-    % fprintf(fid_output_all,['%3d&%9s&%4d&%4d&' ...
-    %     '%4d/%4d&' ...
-    %     '%4d/%4d/%4d&', ...
-    %     '%4d/%4d/%4d&', ...
-    %     '%4d/%4d/%4d&', ...
-    %     '%4d/%4d/%4d \\\\ \n'], ...
-    %     i,Data_Lancelot_flag{i,3},Data_Lancelot(i,1:2),Data_Lancelot(i,3:4),Data_NPFopt{1}(i,[5,6,4]),Data_NPFopt{2}(i,[5,6,4]),Data_NPFopt{3}(i,[5,6,4]),Data_NPFopt{4}(i,[5,6,4]));
     % fprintf(fid_output_all,['%3d&%9s&%4d&%4d&' ...
     %     '%4d/%4d&' ...
     %     '%4d/%4d/%4d&', ...
