@@ -6,7 +6,7 @@
 % Problem setting:
 %   minimize        f(x)
 %  subject to  c_ineq(x) <= 0,
-%                c_eq(x)  = 0.
+%                       c_eq(x)  = 0.
 %
 % Input:
 % [...] = NPFopt(funf,func,con_type,x0)
@@ -69,7 +69,6 @@ beta1 = 0.1; beta2 = 0.75; iter = 0; H = eye(n,n); FL = 0;
 % Begining
 xold = x0;
 [fxold, gfxold] = funf(xold); nf = 1; ngf = 1; % f(x), gradf(x)
-% [cxold,J]=func(xold);gcxold=J';nc=1;ngc=1;% gcxold:n by meq
 [cxold_ineq, cxold_eq, Jc_ineq, Jc_eq] = func(xold); gcxold_ineq = Jc_ineq'; gcxold_eq = Jc_eq'; nc = 1; ngc = 1;% gcxold:n by meq
 m_eq = length(cxold_eq); m_ineq = length(cxold_ineq);
 m = m_eq + m_ineq; Ntry = 0;
@@ -104,10 +103,6 @@ while ((iter <= itermax) && (nf <= nfmax)) && (flag_Alg == 0)
     if exitflag <= 0
         options_lp_tmp = optimoptions('linprog','Display','none','Algorithm','interior-point-legacy');
         [ dlin, flin, exitflag, output_lp ] = linprog(subc,A,b,Aeq,beq,v1,v2,options_lp_tmp);
-        % if exitflag <= 0
-        %     options_lp = optimoptions('linprog','Display','none');
-        %     [ dlin, flin, exitflag, output_lp ] = linprog(subc,A,b,Aeq,beq,v1,v2,options_lp);
-        % end
         if exitflag <= 0
             if alg_display == 1
                 fprintf('         LP failed            '); disp(output_lp);
@@ -156,7 +151,7 @@ while ((iter <= itermax) && (nf <= nfmax)) && (flag_Alg == 0)
         end
     end
     if Rkcount_eq + Rkcount_ineq == 0 % Linearized constraints are compatible
-        [dopt,fquad,exitflag,output_qp1] = quadprog(H, gfxold, - gcxold_ineq', cxold_ineq, - gcxold_eq', cxold_eq, [ ], [ ], [ ], options_qp);
+        [dopt,~,exitflag,output_qp1] = quadprog(H, gfxold, - gcxold_ineq', cxold_ineq, - gcxold_eq', cxold_eq, [ ], [ ], [ ], options_qp);
         if exitflag <= 0 && FL == inf
             if alg_display == 1
                 if Ntry == 0
@@ -192,7 +187,7 @@ while ((iter <= itermax) && (nf <= nfmax)) && (flag_Alg == 0)
             A2_ineq(Rk_ineq(i),n + i) = - 1;
         end
         v1 = [ - Inf*ones(n,1); zeros(Rkcount,1) ];
-        [ dquad, fquad, exitflag, output_qp2 ] = quadprog(Bk, subg, A2_ineq, b2_ineq, A2_eq, b2_eq, v1, [ ], [ ], options_qp);
+        [ dquad, ~, exitflag, output_qp2 ] = quadprog(Bk, subg, A2_ineq, b2_ineq, A2_eq, b2_eq, v1, [ ], [ ], options_qp);
         if exitflag <= 0 && FL == inf
             if alg_display == 1
                 fprintf('         QP2 failed           '); disp(output_qp2);
@@ -342,13 +337,13 @@ output.nf = nf;
 output.nc = nc;
 output.ngf = ngf;
 output.ngc = ngc;
-output.n=n;
-output.meq=m_eq;
-output.m_ineq=m_ineq;
-Mu=pinv(gcxold_eq)*gfxold;
-Lam=pinv(gcxold_ineq)*gfxold;
-Res=norm(gfxold - gcxold_eq*Mu - gcxold_ineq*Lam);
-output.Res=Res;
+output.n = n;
+output.meq = m_eq;
+output.m_ineq = m_ineq;
+Mu = pinv(gcxold_eq)*gfxold;
+Lam = max(pinv(gcxnew_ineq)*gfxnew,0);
+Res = norm(gfxold - gcxold_eq*Mu - gcxold_ineq*Lam);
+output.Res = Res;
 lambda = [ Mu; Lam ];
 end
 
