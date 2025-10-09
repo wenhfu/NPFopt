@@ -154,11 +154,11 @@ for i=1:N
     % end
 end
 for i = 1 : N
-    fprintf(fid_output_all,'%3d&%9s&%4d&%4d',i,Data_Lancelot_flag{i,3});
+    fprintf(fid_output_all,'%3d&%9s&%4d&%4d',i,Data_Lancelot_flag{i,3},Data_Lancelot(i,1:2));
     if Data_Lancelot(i,5) ~= 0
-        fprintf(fid_output_all,'&%4d/%4d*',Data_Lancelot(i,1:2));
+        fprintf(fid_output_all,'&%4d/%4d*',Data_Lancelot(i,3:4));
     else
-        fprintf(fid_output_all,'&%4d/%4d ',Data_Lancelot(i,1:2));
+        fprintf(fid_output_all,'&%4d/%4d ',Data_Lancelot(i,3:4));
     end
     for j = 1 : 4
         if Data_NPFopt{j}(i,3) <= 0
