@@ -11,7 +11,7 @@ con_type = 0;
 MF_all = [0,1,2,3,4,5,6];
 
 %% Results of Tab 1
-fid = fopen('Example_out_new.txt','w');
+fid = fopen('Example_out.txt','w');
 fprintf(fid,'Results for Tab 1:\n');
 for MF = MF_all
     fprintf(fid,'\nMF  = %4d:\n',MF);
