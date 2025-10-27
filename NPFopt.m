@@ -275,7 +275,7 @@ while ((iter <= itermax) && (nf <= nfmax)) && (flag_Alg == 0)
                 end
             end
             % if abs(fxold-fxnew)/max(abs(fxnew),1) < 0.1*epsilon && vxnew < 0.01*epsilon
-            %     fprintf('successfully end              ');
+            %     fprintf('successfully solved           ');
             %     flag_Alg = 3; break
             % end
         end % for while (alpha)
