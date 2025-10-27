@@ -27,7 +27,7 @@ Simply place the `NPFopt.m` file in your MATLAB working directory and call it as
 | Parameter  | Type            | Description                                                  |
 | :--------- | :-------------- | :----------------------------------------------------------- |
 | `funf`     | Function Handle | Objective function, must return `[fx, gfx]`.<br />Format: `[fx, gfx] = funf(x)`, where `fx` is the objective function value at `x`, `gfx` is the gradient vector at `x`. |
-| `func`     | Function Handle | Constraint function, must return `[cx, gcx]`.<br />Format: `[cx, gcx] = func(x)`, where `cx` is the constraint function value at `x`, `gcx` is the Jacobian matrix at `x`. |
+| `func`     | Function Handle | Constraint function, must return `[c_ineq,c_eq,Jc_ineq,Jc_eq]`.<br />Format: `[c_ineq,c_eq,Jc_ineq,Jc_eq] = func(x)`,where `c_ineq` and `c_eq` are the values of the inequality constraint functions ($c_{ineq}(x)\ge0$) and equality constraint functions ($c_{eq}(x)=0$) at `x`, and `Jc_ineq` and `Jc_eq` are their corresponding Jacobian matrices at x. |
 | `x0`       | Vector          | Initial point                                                |
 | `MF`       | Integer         | Maximum allowed consecutive unsuccessful iterations (default `0`) |
 | `opts`     | Struct          | Optional parameters:<br /> `epsilon`: Convergence tolerance (default `1e-5`)<br /> `nfmax`: Maximum function evaluations (default `1000`) <br /> `itermax`: Maximum iterations (default `1000`) <br /> `display`: Level of display (`0` or `1`, default `1`) |
@@ -113,4 +113,5 @@ disp('Objective function value:'); disp(fval);
 **Author**: Wenhao Fu
 
 **Last Updated**: October 27, 2025
+
 
