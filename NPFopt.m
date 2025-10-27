@@ -169,7 +169,7 @@ while ((iter <= itermax) && (nf <= nfmax)) && (flag_Alg == 0)
         end
         if ((vxold <= epsilon) && (norm(dopt,Inf) <= epsilon))
             if alg_display == 1
-                fprintf('successfully end              ');
+                fprintf('successfully solved           ');
             end
             flag_Alg = 2; break;
         end
