@@ -1,6 +1,6 @@
 ## Introduction
 
-`NPFopt.m` is a MATLAB-based **OPT**imization solver that utulizes the **P**enalty-**F**ree method with a **N**onmonotone line search strategy, designed to solve problems with equality or inequality constraints. Its key features include:
+`NPFopt.m` is a MATLAB-based **N**onmonotone **P**enalty-**F**ree **opt**imization solver designed to handle problems with equality and inequality constraints. It employs a nonmonotone line search strategy within a penalty-free framework, offering robust and efficient performance for constrained optimization. Its key features include:
 
 - **Nonmonotone Line Search**: Relaxes the requirement for monotonic decrease in the objective function or constraint violation measurement, improving global convergence and Maratos effect avoidance. 
 - **Penalty-Free Method**: Avoids numerical instability issues introduced by traditional penalty functions.
@@ -41,7 +41,7 @@ Simply place the `NPFopt.m` file in your MATLAB working directory and call it as
 | `x`        | Vector  | Optimal solution                                             |
 | `fval`     | Scalar  | Objective function value at the solution                     |
 | `exitflag` | Integer | Termination flag (see **Exit Flags below**)                  |
-| `output`   | Struct  | Detailed information:<br /> `con`: Constraint violation <br />`iter`: Iteration count<br /> `nf`: Objective function evaluations <br />`ngf`: Gradient of objective function evaluations<br /> `nc`: Constraint function evaluations <br />`ngc`: Gradient of constraint function evaluations<br />`n`: Number of variables<br />`m`:Number of constraints<br />`Res`:Optimality error |
+| `output`   | Struct  | Detailed information:<br /> `con`: Constraint violation <br />`iter`: Iteration count<br /> `nf`: Objective function evaluations <br />`ngf`: Gradient of objective function evaluations<br /> `nc`: Constraint function evaluations <br />`ngc`: Gradient of constraint function evaluations<br />`n`: Number of variables<br />`m`: Number of constraints<br />`Res`: Optimality error |
 | `lambda`   | Vector  | Lagrange multipliers                                         |
 
 ------
@@ -77,7 +77,7 @@ Simply place the `NPFopt.m` file in your MATLAB working directory and call it as
 
 ### Problem Description
 
-Minimize $f(x)=x_1^2+x_2^2$   , subject to $c(x)=1-x_1-x_2=0$.
+Minimize $f(x)=x_1^2+x_2^2$   , subject to $c_1(x)=x(1) - 2\ge0$, $c_2(x)=1-x_1-x_2=0$.
 
 ### MATLAB Code
 
@@ -112,4 +112,5 @@ disp('Objective function value:'); disp(fval);
 
 **Author**: Wenhao Fu
 
-**Last Updated**: October 06, 2025
+**Last Updated**: October 27, 2025
+
