@@ -160,16 +160,16 @@ clear P_Nf_Lan P_Ng_Lan P_Nf_MF0 P_Ng_MF0 P_Nf_MF2 P_Ng_MF2 P_Nf_MF4 P_Ng_MF4 P_
 k=1;
 axis_tau = 1:0.01:25;
 for tau=axis_tau
-    P_Nf_Lan(k) = (sum((Nf_Lan./Nf_min) <= tau) / N);
-    P_Ng_Lan(k) = (sum((Ng_Lan./Ng_min) <= tau) / N);
-    P_Nf_MF0(k) = (sum((Nf_MF0./Nf_min) <= tau) / N);
-    P_Ng_MF0(k) = (sum((Ng_MF0./Ng_min) <= tau) / N);
-    P_Nf_MF2(k) = (sum((Nf_MF2./Nf_min) <= tau) / N);
-    P_Ng_MF2(k) = (sum((Ng_MF2./Ng_min) <= tau) / N);
-    P_Nf_MF4(k) = (sum((Nf_MF4./Nf_min) <= tau) / N);
-    P_Ng_MF4(k) = (sum((Ng_MF4./Ng_min) <= tau) / N);
-    P_Nf_MF6(k) = (sum((Nf_MF6./Nf_min) <= tau) / N);
-    P_Ng_MF6(k) = (sum((Ng_MF6./Ng_min) <= tau) / N);
+    P_Nf_Lan(k) = sum((Nf_Lan./Nf_min) <= tau) / N;
+    P_Ng_Lan(k) = sum((Ng_Lan./Ng_min) <= tau) / N;
+    P_Nf_MF0(k) = sum((Nf_MF0./Nf_min) <= tau) / N;
+    P_Ng_MF0(k) = sum((Ng_MF0./Ng_min) <= tau) / N;
+    P_Nf_MF2(k) = sum((Nf_MF2./Nf_min) <= tau) / N;
+    P_Ng_MF2(k) = sum((Ng_MF2./Ng_min) <= tau) / N;
+    P_Nf_MF4(k) = sum((Nf_MF4./Nf_min) <= tau) / N;
+    P_Ng_MF4(k) = sum((Ng_MF4./Ng_min) <= tau) / N;
+    P_Nf_MF6(k) = sum((Nf_MF6./Nf_min) <= tau) / N;
+    P_Ng_MF6(k) = sum((Ng_MF6./Ng_min) <= tau) / N;
     k = k + 1;
 end
 
