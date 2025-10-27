@@ -327,9 +327,8 @@ if alg_display == 1
     if iter > itermax || nf > nfmax
         fprintf('     Reach Max iteration      ');
     end
-    fprintf('n =%4d, meq =%4d, mineq =%4d, nf =%4d, ng =%4d, iter =%3d, f =%12.4e, v =%12.4e ',n,m_eq,m_ineq,nf,ngf,iter,fxnew,vxnew);
+    fprintf('n =%4d, meq =%4d, mineq =%4d, nf =%4d, ng =%4d, iter =%3d, f =%12.4e, v =%12.4e \n',n,m_eq,m_ineq,nf,ngf,iter,fxnew,vxnew);
 end
-fprintf('\n');
 x = xnew; fval = fxnew; exitflag = flag_Alg;
 output.con = vxnew;
 output.iter = iter;
