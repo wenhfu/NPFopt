@@ -1,5 +1,5 @@
-% A penalty-free method with nonmonotone line search for nonlinear optimization, Oct. 09, 2025.
-% min. f(x) subject to c(x)=0, c(x)>=0.
+% A penalty-free method with nonmonotone line search for nonlinear optimization, Oct. 27, 2025.
+% min. f(x) subject to c_ineq(x)>=0, c_eq(x)=0.
 % Comparision on CUTEst problems for Algorithm 2.1 by T. Xu et al. as well as Lancelot B.
 % Coded by Wenhao Fu.
 clear; clc
@@ -21,7 +21,7 @@ for MF_idx=1:length(MF_all)
     TP_index = 1 : N;
     Data_NPFoptEq = zeros(N,6);
     for Loop_i = TP_index
-        fprintf('\nComparision for c(x)=0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
+        fprintf('Comparision for c(x)=0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
         try prob = cutest_setup(); catch; cutest_terminate(); prob = cutest_setup(); end
@@ -38,7 +38,7 @@ for MF_idx=1:length(MF_all)
     TP_index = 1 : N;
     Data_NPFoptIneqGe = zeros(N,6);
     for Loop_i=TP_index
-        fprintf('\nComparision for c(x)>0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
+        fprintf('Comparision for c(x)>0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
         try prob = cutest_setup(); catch; cutest_terminate(); prob = cutest_setup(); end
@@ -55,7 +55,7 @@ for MF_idx=1:length(MF_all)
     TP_index = 1 : N;
     Data_NPFoptIneqLe = zeros(N,6);
     for Loop_i=TP_index
-        fprintf('\nComparision for c(x)<0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
+        fprintf('Comparision for c(x)<0,  MF=%1d, Problem Name%9s:  ',MF,SubFolderNames{Loop_i});
         Dir = fullfile(pwd_Problem,SubFolderNames{Loop_i});
         cd(Dir)
         try prob = cutest_setup(); catch; cutest_terminate(); prob = cutest_setup(); end
