@@ -1,12 +1,12 @@
 % 
 % A penalty-free method with nonmonotone line search for nonlinear optimization.
 %
-% Coded by Wenhao Fu, Feb. 10, 2025.
+% Coded by Wenhao Fu, Oct. 27, 2025.
 %
 % Problem setting:
 %   minimize        f(x)
-%  subject to  c_ineq(x) <= 0,
-%                       c_eq(x)  = 0.
+%  subject to  c_ineq(x) >= 0,
+%                c_eq(x)  = 0.
 %
 % Input:
 % [...] = NPFopt(funf,func,con_type,x0)
@@ -14,9 +14,10 @@
 % [...] = NPFopt(funf,func,con_type,x0,MF,opts)
 %
 % funf: A matlab function that calculates the value of f(x) and gradient value of f(x).
+% [f,gf] = funf(x)
 %
 % func: A matlab function that calculates the value of c(x) and gradient value of c(x).
-%
+% [c_ineq,c_eq,Jc_ineq,Jc_eq] = func(x)
 %
 % x0: Initial point, specified as a real vector or real array.
 %
@@ -48,8 +49,6 @@
 % lambda: Lagrange multipliers.
 
 function [x,fval,exitflag,output,lambda] = NPFopt(funf,func,x0,MF,opts)
-% [f,gf] = funf(x)
-% [c_ineq,c_eq,Jc_ineq,Jc_eq] = func(x)
 if ~exist('MF','var')
     MF = 0;
 end
@@ -73,11 +72,12 @@ xold = x0;
 m_eq = length(cxold_eq); m_ineq = length(cxold_ineq);
 m = m_eq + m_ineq; Ntry = 0;
 if m_eq == 0; gcxold_eq=zeros(n,0); end; if m_ineq == 0; gcxold_ineq = zeros(n,0); end
+flag_Alg = 0;
 if max(n,(m_eq + m_ineq))>=500
     if alg_display == 1
         fprintf('Large scaled problem, pass.');
     end
-    x = x0; fval = fxold; exitflag = -5;
+    x = x0; fval = fxold; flag_Alg = -5;
     output.con = 0; output.iter = 0; output.nf = 0; output.nc = 0; output.ngf = 0; output.ngc = 0; output.n = n; output.m = m_eq + m_ineq; output.Res = inf;
     lambda = zeros(m_eq + m_ineq, 1);
     return
@@ -86,7 +86,6 @@ vxold = norm(cxold_eq, 1) + norm(max(- cxold_ineq,0),1);
 vmax = max(1, vxold); 
 Mu = ones(m_eq, 1); Lam = ones(m_ineq,1);
 xnew = xold; fxnew = fxold; vxnew = vxold;
-flag_Alg = 0;
 options_qp = optimoptions('quadprog','Display','none');
 if n>2
     options_lp = optimoptions('linprog','Display','none');
@@ -361,12 +360,4 @@ function B=bfgs(B,s,y)
    end
    B = B + rbar*rbar'/srbar - bs*bs'/sbs;
 end
-
-
-
-
-
-
-
-
 
