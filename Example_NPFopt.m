@@ -33,7 +33,6 @@ for MF = MF_all
     for rho = [10,100,1000]
         fprintf(fid,'rho = %4d:   ',rho);
         funf = @(x) deal(-x(1)+rho*(x(1)^2+x(2)^2-1), [-1+2*rho*x(1); 2*rho*x(2)]);
-        % func = @(x) deal(x(1)^2+x(2)^2-1,[2*x(1), 2*x(2)],[],[]);
         func = @(x) deal([],x(1)^2+x(2)^2-1,[],[2*x(1), 2*x(2)]);
         t = 1e-4;
         x0 = [cos(t);sin(t)];
